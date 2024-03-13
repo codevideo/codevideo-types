@@ -1,0 +1,13 @@
+export { IAction } from './interfaces/IAction';
+export { IAudioFile } from './interfaces/IAudioFile';
+export { IPoint } from './interfaces/IPoint';
+export { IStep } from './interfaces/IStep';
+export { convertActionsToCodeActions } from './type-guards/convertActionsToCodeActions';
+export { convertActionsToSpeakActions } from './type-guards/convertActionsToSpeakActions';
+export { isCodeAction } from './type-guards/isCodeAction';
+export { isSpeakAction } from './type-guards/isSpeakAction';
+export { ClickActions } from './types/ClickActions';
+export { CodeAction } from './types/CodeAction';
+export { ComplexKeyboardActions } from './types/ComplexKeyboardActions';
+export { SimpleKeyboardActions } from './types/SimpleKeyboardActions';
+export { SpeakAction } from './types/SpeakAction';

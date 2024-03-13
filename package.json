@@ -1,0 +1,30 @@
+{
+  "name": "@fullstackcraftllc/codevideo-types",
+  "version": "1.0.0",
+  "description": "TypeScript types for the CodeVideo ecosystem.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c ./rollup.config.js",
+    "type-check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codevideo/codevideo-types.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "codevideo"
+  ],
+  "author": "Chris Frewin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codevideo/codevideo-types/issues"
+  },
+  "homepage": "https://github.com/codevideo/codevideo-types#readme",
+  "devDependencies": {
+    "rollup": "^4.13.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.4.2"
+  }
+}
