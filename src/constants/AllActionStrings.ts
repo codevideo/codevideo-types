@@ -1,5 +1,5 @@
 // TODO: a unit test to check if these are all statically within the other types would be cool
-export const AllActionStrings = [
+export const allActionStrings = [
     // from SpeakActions
     "speak-before",
     "speak-after",

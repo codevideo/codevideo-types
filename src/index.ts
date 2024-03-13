@@ -1,4 +1,4 @@
-export { AllActionStrings } from './constants/AllActionStrings';
+export { allActionStrings } from './constants/allActionStrings';
 export { IAction } from './interfaces/IAction';
 export { IAudioFile } from './interfaces/IAudioFile';
 export { IPoint } from './interfaces/IPoint';
