@@ -9,7 +9,6 @@ export const allActionStrings = [
     "click-editor",
     // from SimpleKeyboardActions
     "type-editor",
-    "type-editor",
     "type-terminal",
     "arrow-up",
     "arrow-down",
