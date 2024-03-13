@@ -3,4 +3,4 @@ import { ComplexKeyboardActions } from "./ComplexKeyboardActions";
 import { SimpleKeyboardActions } from "./SimpleKeyboardActions";
 import { SpeakActions } from "./SpeakActions";
 
-export type AllActionTypes = SimpleKeyboardActions | ComplexKeyboardActions | ClickActions | SpeakActions;
+export type AllActions = SimpleKeyboardActions | ComplexKeyboardActions | ClickActions | SpeakActions;

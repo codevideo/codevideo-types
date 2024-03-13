@@ -6,6 +6,7 @@ export { convertActionsToCodeActions } from './type-guards/convertActionsToCodeA
 export { convertActionsToSpeakActions } from './type-guards/convertActionsToSpeakActions';
 export { isCodeAction } from './type-guards/isCodeAction';
 export { isSpeakAction } from './type-guards/isSpeakAction';
+export { AllActions } from './types/AllActions';
 export { ClickActions } from './types/ClickActions';
 export { CodeAction } from './types/CodeAction';
 export { ComplexKeyboardActions } from './types/ComplexKeyboardActions';
