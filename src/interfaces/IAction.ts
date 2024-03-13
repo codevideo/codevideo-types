@@ -1,10 +1,7 @@
-import { ClickActions } from "../types/ClickActions";
-import { ComplexKeyboardActions } from "../types/ComplexKeyboardActions";
-import { SimpleKeyboardActions } from "../types/SimpleKeyboardActions";
-import { SpeakActions } from "../types/SpeakActions";
+import { AllActions } from "../types/AllActions";
 
 export interface IAction {
-    name: SimpleKeyboardActions | ClickActions | SpeakActions | ComplexKeyboardActions;
+    name: AllActions;
     value: string;
 }
 
