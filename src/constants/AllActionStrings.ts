@@ -27,6 +27,8 @@ export const allActionStrings = [
     "delete-line",
     "open-terminal",
     "save",
+    // from MiscellaneousActions
+    "wait",
     // from MouseActions
     "click-filename"
 ];
