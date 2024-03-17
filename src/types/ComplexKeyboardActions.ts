@@ -1,1 +1,1 @@
-export type ComplexKeyboardActions = "command-left" | "command-right" | "highlight-code" | "delete-line"
+export type ComplexKeyboardActions = "command-left" | "command-right" | "highlight-code" | "delete-line" | "open-terminal" | "save"

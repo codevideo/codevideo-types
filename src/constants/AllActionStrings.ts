@@ -24,5 +24,9 @@ export const allActionStrings = [
     "command-left",
     "command-right",
     "highlight-code",
-    "delete-line"
+    "delete-line",
+    "open-terminal",
+    "save",
+    // from MouseActions
+    "click-filename"
 ];
