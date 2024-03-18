@@ -2,6 +2,7 @@ export { allActionStrings } from './constants/allActionStrings';
 export { IAction } from './interfaces/IAction';
 export { IAudioFile } from './interfaces/IAudioFile';
 export { IPoint } from './interfaces/IPoint';
+export { ISpeechCaption } from './interfaces/ISpeechCaption';
 export { convertActionsToCodeActions } from './type-guards/convertActionsToCodeActions';
 export { convertActionsToSpeakActions } from './type-guards/convertActionsToSpeakActions';
 export { isCodeAction } from './type-guards/isCodeAction';
