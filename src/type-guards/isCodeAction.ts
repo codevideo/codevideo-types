@@ -17,6 +17,7 @@ export const isCodeAction = (action: IAction): action is CodeAction => {
         'space': true,
         'highlight-code': true,
         'delete-line': true,
+        'command-left': true,
         'command-right': true,
     };
 }
