@@ -9,13 +9,13 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: "dist/bundle.cjs.js", // CommonJS format for Node.js
-        format: "cjs",
-      },
-      {
-        file: "dist/bundle.esm.js", // ES Module format for browsers
+        file: "dist/index.js", // ES Module format for browsers
         format: "es",
       },
+      {
+        file: "dist/index.cjs", // CommonJS format for Node.js
+        format: "cjs",
+      }
     ],
     plugins: [
       resolve(), // resolve node_modules
