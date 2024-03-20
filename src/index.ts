@@ -6,6 +6,7 @@ export { ISpeechCaption } from './interfaces/ISpeechCaption';
 export { convertActionsToCodeActions } from './type-guards/convertActionsToCodeActions';
 export { convertActionsToSpeakActions } from './type-guards/convertActionsToSpeakActions';
 export { isCodeAction } from './type-guards/isCodeAction';
+export { isRepeatableAction } from './type-guards/isRepeatableAction';
 export { isSpeakAction } from './type-guards/isSpeakAction';
 export { AllActions } from './types/AllActions';
 export { ClickActions } from './types/ClickActions';
