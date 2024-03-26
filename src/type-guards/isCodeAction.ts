@@ -19,5 +19,10 @@ export const isCodeAction = (action: IAction): action is CodeAction => {
         'delete-line': true,
         'command-left': true,
         'command-right': true,
+        'command-d': true,
+        'command-c': true,
+        'command-v': true,
+        'shift-down-arrow': true,
+        'shift-up-arrow': true,
     };
 }
