@@ -36,5 +36,11 @@ export const allActionStrings = [
     // from MiscellaneousActions
     "wait",
     // from MouseActions
-    "click-filename"
+    "click-filename",
+    // from FileActions
+    "create-file",
+    "open-file",
+    "delete-file",
+    "create-folder",
+    "delete-folder"
 ];

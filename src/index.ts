@@ -15,6 +15,7 @@ export { MiscellaneousActions } from './types/MiscellaneousActions';
 export { MouseActions } from './types/MouseActions';
 export { ProgrammingLanguages } from './types/ProgrammingLanguages';
 export { ComplexKeyboardActions } from './types/ComplexKeyboardActions';
+export { FileActions } from './types/FileActions';
 export { SimpleKeyboardActions } from './types/SimpleKeyboardActions';
 export { SpeakAction } from './types/SpeakAction';
 export { TextToSpeechOptions } from './types/TextToSpeechOptions';
