@@ -10,6 +10,7 @@ export { isRepeatableAction } from './type-guards/isRepeatableAction';
 export { isSpeakAction } from './type-guards/isSpeakAction';
 export { AllActions } from './types/actions/AllActions';
 export { ClickActions } from './types/actions/ClickActions';
+export { ActionEnvironment } from './types/ActionEnvironment';
 export { CodeAction } from './types/CodeAction';
 export { MiscellaneousActions } from './types/actions/MiscellaneousActions';
 export { MouseActions } from './types/actions/MouseActions';
