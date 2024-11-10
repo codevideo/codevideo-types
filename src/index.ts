@@ -1,4 +1,8 @@
-export { allActionStrings } from './constants/allActionStrings';
+export { AllActionStrings } from './constants/AllActionStrings';
+export { ICourse } from './interfaces/toplevel/ICourse';
+export { ILesson } from './interfaces/toplevel/ILesson';
+export { IProjectSnapshot } from './interfaces/project/IProjectSnapshot';
+export { IFileStructure } from './interfaces/project/IFileStructure';
 export { IAction } from './interfaces/IAction';
 export { IAudioFile } from './interfaces/IAudioFile';
 export { IPoint } from './interfaces/IPoint';
@@ -20,3 +24,4 @@ export { FileActions } from './types/actions/FileActions';
 export { SimpleKeyboardActions } from './types/actions/SimpleKeyboardActions';
 export { SpeakAction } from './types/SpeakAction';
 export { TextToSpeechOptions } from './types/TextToSpeechOptions';
+export { RepeatableActionNames } from './types/RepeatableActionNames';

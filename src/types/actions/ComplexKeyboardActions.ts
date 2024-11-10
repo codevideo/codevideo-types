@@ -10,4 +10,4 @@ export type ComplexKeyboardActions =
   | "delete-line"
   | "open-terminal"
   | "highlight-in-terminal"
-  | "save";
+  | "command-s";

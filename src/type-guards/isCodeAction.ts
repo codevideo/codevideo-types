@@ -12,6 +12,7 @@ export const isCodeAction = (action: IAction): action is CodeAction => {
         'enter': true,
         'tab': true,
         'shift+arrow-right': true,
+        'shift+arrow-left': true,
         'cmd+d': true,
         'backspace': true,
         'space': true,
