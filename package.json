@@ -1,6 +1,6 @@
 {
   "name": "@fullstackcraftllc/codevideo-types",
-  "version": "1.4.2",
+  "version": "1.5.1",
   "description": "TypeScript types for the CodeVideo ecosystem.",
   "type": "module",
   "main": "dist/index.js",
@@ -34,5 +34,8 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@fullstackcraftllc/codevideo-dynamic-ast": "^1.0.4"
   }
 }
