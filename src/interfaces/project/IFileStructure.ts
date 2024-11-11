@@ -2,17 +2,17 @@ export interface IFileStructure {
     [key: string]: FileItem;
 }
 
-interface BaseFileItem {
+export interface BaseFileItem {
     content: string;
     type: 'file' | 'directory';
 }
 
-interface FileLeaf extends BaseFileItem {
+export interface FileLeaf extends BaseFileItem {
     type: 'file';
     language: string;
 }
 
-interface DirectoryNode extends BaseFileItem {
+export interface DirectoryNode extends BaseFileItem {
     type: 'directory';
     children?: IFileStructure;
 }

@@ -28,3 +28,4 @@ export { SimpleKeyboardActions } from './types/actions/SimpleKeyboardActions';
 export { SpeakAction } from './types/SpeakAction';
 export { TextToSpeechOptions } from './types/TextToSpeechOptions';
 export { RepeatableActionNames } from './types/RepeatableActionNames';
+export { FileItem } from './interfaces/project/IFileStructure';
