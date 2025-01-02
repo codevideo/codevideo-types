@@ -1,7 +1,7 @@
-import { IAction } from '../interfaces/IAction';
 import { ComplexKeyboardActions } from './actions/ComplexKeyboardActions';
 import { SimpleKeyboardActions } from './actions/SimpleKeyboardActions';
 
-export type CodeAction = IAction & {
+export type KeyboardAction = {
     name: SimpleKeyboardActions | ComplexKeyboardActions;
+    value: string;
 };

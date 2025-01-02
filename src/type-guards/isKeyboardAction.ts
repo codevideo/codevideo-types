@@ -1,7 +1,7 @@
 import { IAction } from "../interfaces/IAction";
-import { CodeAction } from "../types/CodeAction";
+import { KeyboardAction } from "../types/KeyboardAction";
 
-export const isCodeAction = (action: IAction): action is CodeAction => {
+export const isKeyboardAction = (action: IAction): action is KeyboardAction => {
     return (action.name as string) in {
         'type-editor': true,
         'type-terminal': true,
