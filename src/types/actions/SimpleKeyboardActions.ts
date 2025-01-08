@@ -1,5 +1,5 @@
 export type SimpleKeyboardActions = "type-editor"
-    | "type-editor"
+    | "save-editor"
     | "type-terminal"
     | "arrow-up"
     | "arrow-down"

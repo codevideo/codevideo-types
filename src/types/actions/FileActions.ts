@@ -1,7 +1,0 @@
-export type FileActions = "create-file" 
- | "open-file"
- | "delete-file"
- | "create-folder"
- | "delete-folder"
- | "expand-folder"
- | "collapse-folder"

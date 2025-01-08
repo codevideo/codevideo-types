@@ -8,11 +8,11 @@ import { IProjectMetadata } from "./IProjectMetadata";
 export interface IProjectSnapshot {
     metadata: IProjectMetadata;
     fileStructure: IFileStructure;
-    currentFile: FileItem;
+    currentFile: FileItem | null;
     openFiles: Array<FileItem>;
-    currentTerminalContents: string;
+    currentTerminalContents: string | null;
     terminalContents: Array<string>;
-    cursorPosition: { x: number, y: number };
+    cursorPosition: { x: number, y: number } | null;
     currentSpeechCaption: string;
 }
 

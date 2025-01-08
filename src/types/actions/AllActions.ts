@@ -4,17 +4,15 @@ import { SimpleKeyboardActions } from "./SimpleKeyboardActions";
 import { SpeakActions } from "./SpeakActions";
 import { MouseActions } from "./MouseActions";
 import { MiscellaneousActions } from "./MiscellaneousActions";
-import { KeyboardAction } from "../KeyboardAction";
-import { FileActions } from "./FileActions";
+import { FileExplorerActions } from "./FileExplorerActions";
 import { TerminalActions } from "./TerminalActions";
 
 export type AllActions =
   | ClickActions
-  | KeyboardAction
+  | SimpleKeyboardActions 
   | ComplexKeyboardActions
-  | FileActions
+  | FileExplorerActions
   | MiscellaneousActions
   | MouseActions
-  | SimpleKeyboardActions
   | SpeakActions
   | TerminalActions;

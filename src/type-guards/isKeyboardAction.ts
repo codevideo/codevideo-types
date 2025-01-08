@@ -4,6 +4,7 @@ import { KeyboardAction } from "../types/KeyboardAction";
 export const isKeyboardAction = (action: IAction): action is KeyboardAction => {
     return (action.name as string) in {
         'type-editor': true,
+        'save-editor': true,
         'type-terminal': true,
         'arrow-up': true,
         'arrow-down': true,
