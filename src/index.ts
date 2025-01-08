@@ -19,6 +19,7 @@ export { ClickActions } from './types/actions/ClickActions';
 export { ActionEnvironment } from './types/ActionEnvironment';
 export { KeyboardAction } from './types/KeyboardAction';
 export { TerminalAction } from './types/TerminalAction';
+export { FileAction } from './types/FileAction';
 export { MiscellaneousActions } from './types/actions/MiscellaneousActions';
 export { MouseActions } from './types/actions/MouseActions';
 export { ProgrammingLanguages } from './types/ProgrammingLanguages';

@@ -10,11 +10,14 @@ export interface BaseFileItem {
 export interface FileLeaf extends BaseFileItem {
     type: 'file';
     language: string;
+    caretPosition: { row: number; col: number };
+    cursorPosition: { x: number, y: number };
 }
 
 export interface DirectoryNode extends BaseFileItem {
     type: 'directory';
     children?: IFileStructure;
+    collapsed: boolean;
 }
 
 export type FileItem = FileLeaf | DirectoryNode;
