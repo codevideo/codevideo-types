@@ -1,12 +1,12 @@
 import { IAction } from "../IAction";
-import { IProjectSnapshot } from "../project/IProjectSnapshot";
+import { ICourseSnapshot } from "./ICourseSnapshot";
 
 // Represents a lesson in a software course
 export interface ILesson {
     id: string;
     name: string;
     description: string;
-    initialProjectSnapshot: IProjectSnapshot;
+    initialSnapshot: ICourseSnapshot;
     actions: Array<IAction>;
-    finalProjectSnapshot: IProjectSnapshot;
+    finalSnapshot: ICourseSnapshot;
 }

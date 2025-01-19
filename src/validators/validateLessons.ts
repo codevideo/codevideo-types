@@ -3,8 +3,8 @@ import { ILesson } from "../interfaces/toplevel/ILesson";
 // given an array of lessons in order, validate that the end state of each lesson is the same as the start state of the next lesson
 export const validateLessons = (lessons: ILesson[]) => {
     for (let i = 0; i < lessons.length - 1; i++) {
-        const snapshotAtEndOfCurrentLesson = lessons[i].finalProjectSnapshot;
-        const snapshotAtStartOfNextLesson = lessons[i + 1].initialProjectSnapshot;
+        const snapshotAtEndOfCurrentLesson = lessons[i].finalSnapshot;
+        const snapshotAtStartOfNextLesson = lessons[i + 1].initialSnapshot;
        
         // deep compare the two snapshots
         if (!deepEqual(snapshotAtEndOfCurrentLesson, snapshotAtStartOfNextLesson)) {

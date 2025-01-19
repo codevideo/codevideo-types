@@ -1,12 +1,12 @@
 import { IFileSource, parseProject } from "@fullstackcraftllc/codevideo-dynamic-ast";
 import { ILesson } from "../interfaces/toplevel/ILesson";
-import { IFileStructure } from "../interfaces/project/IFileStructure";
+import { IFileStructure } from "../interfaces/IFileStructure";
 
 export const validateProjectAtEndOfLesson = async (lesson: ILesson) => {
-    const finalProjectSnapshotForLesson = lesson.finalProjectSnapshot;
+    const finalSnapshotForLesson = lesson.finalSnapshot;
 
     // from the project snapshot's file structure, get the list of files of type
-    const fileSources = getFileSourcesFromProjectStructure(finalProjectSnapshotForLesson.fileStructure);
+    const fileSources = getFileSourcesFromFileStructure(finalSnapshotForLesson.editorSnapshot.fileStructure);
 
     // use codevideo-dynamic-ast to validate that all the files in the project snapshot are valid
     const parseResult = await parseProject(fileSources); 
@@ -18,7 +18,7 @@ export const validateProjectAtEndOfLesson = async (lesson: ILesson) => {
     }
 }
 
-const getFileSourcesFromProjectStructure = (fileStructure: IFileStructure): Array<IFileSource> => {
+const getFileSourcesFromFileStructure = (fileStructure: IFileStructure): Array<IFileSource> => {
     // for each file in the file structure, create an IFileSource
     const fileSources: Array<IFileSource> = [];
     for (const filePath in fileStructure) {
