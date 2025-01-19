@@ -1,1 +1,1 @@
-export type GUIMode = 'step' | 'playback' | 'record'
+export type GUIMode = 'step' | 'record' | 'replay'
