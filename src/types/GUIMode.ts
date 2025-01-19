@@ -1,0 +1,1 @@
+export type GUIMode = 'step' | 'playback' | 'record'

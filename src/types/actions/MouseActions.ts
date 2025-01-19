@@ -1,1 +1,1 @@
-export type MouseActions = "click-filename"
+export type MouseActions = "mouse" | "mouse-move" | "click" | "double-click" | "triple-click" | "click-filename"
