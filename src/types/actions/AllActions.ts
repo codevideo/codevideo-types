@@ -1,18 +1,14 @@
-import { ClickActions } from "./ClickActions";
-import { ComplexKeyboardActions } from "./ComplexKeyboardActions";
-import { SimpleKeyboardActions } from "./SimpleKeyboardActions";
-import { SpeakActions } from "./SpeakActions";
+import { AuthorActions } from "./AuthorActions";
 import { MouseActions } from "./MouseActions";
-import { MiscellaneousActions } from "./MiscellaneousActions";
 import { FileExplorerActions } from "./FileExplorerActions";
 import { TerminalActions } from "./TerminalActions";
+import { EditorActions } from "./EditorActions";
 
+// all actions combines the 5 domains of the CodeVideo world
 export type AllActions =
-  | ClickActions
-  | SimpleKeyboardActions 
-  | ComplexKeyboardActions
+  | AuthorActions
   | FileExplorerActions
-  | MiscellaneousActions
+  | EditorActions
   | MouseActions
-  | SpeakActions
-  | TerminalActions;
+  | TerminalActions
+  | AuthorActions;

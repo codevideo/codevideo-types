@@ -1,11 +1,12 @@
 import { IAction } from "../interfaces/IAction";
-import { SpeakAction } from "../types/SpeakAction";
+import { AuthorAction } from "../types/AuthorAction";
 
-export const isSpeakAction = (action: IAction): action is SpeakAction => {
+export const isAuthorAction = (action: IAction): action is AuthorAction=> {
     return (action.name as string) in {
-        'speak-before': true,
-        'speak-after': true,
-        'speak-during': true,
+        'author-speak-before': true,
+        'author-speak-after': true,
+        'author-speak-during': true,
+        'author-wait': true,
     };
 }
 

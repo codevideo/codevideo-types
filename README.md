@@ -10,6 +10,10 @@ A software course is represented by the top level interface [`ICourse`](/src/int
 
 Read more about this in [our whitepaper](https://studio.codevideo.io/pdf/CodeVideo_Framework_White_Paper.pdf).
 
+### Domains
+
+There are 5 domains to a codevideo action: the file explorer, the editor, the terminal, the mouse, and the author. Each of these domains has its own set of actions that can be performed with it, prefixed by `file-explorer-`, `editor-`, `terminal-`, `mouse-`, and `author-` respectively.
+
 ### IAction
 
 [`IAction`](./src/interfaces/IAction.ts) - The bread and butter of all things CodeVideo. An action is defined by a `name` and a `value` and can perform all possible actions in the CodeVideo ecosystem. Examples include `type-editor`, `type-terminal`, `arrow-up`, `enter`, etc.
@@ -20,7 +24,7 @@ A convenience array of all possible action names is available at [AllActionStrin
 
 #### Action Values
 
-Action values are always strings, but typically represent a number when they are keyboard actions such as `arrow-up`, `enter`, etc. These are catalogued in [RepeatableActionNames](./src/types/RepeatableActionNames.ts).
+Action values are always strings, but typically represent a number when they are repeatable actions such as `editor-arrow-up`, `editor-enter`, etc. These are catalogued in [RepeatableActionNames](./src/types/RepeatableActionNames.ts).
 
 ### Project Snapshots
 

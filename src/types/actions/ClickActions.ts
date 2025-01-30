@@ -1,1 +1,0 @@
-export type ClickActions = "click-terminal" | "click-editor";
