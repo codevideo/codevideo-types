@@ -1,1 +1,1 @@
-export type ActionEnvironment = 'monaco-single-editor' | 'visual-studio-code-web' | 'visual-studio-code-native'
+export type ActionEnvironment = 'monaco-single-editor' | 'visual-studio-code-web' | 'visual-studio-code-native' | 'visual-studio-code-electron'

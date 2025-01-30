@@ -5,6 +5,7 @@ export const isFileExplorerAction = (action: IAction): action is FileExplorerAct
     return (action.name as string) in {
         'create-file': true,
         'open-file': true,
+        'close-file': true,
         'rename-file': true,
         'delete-file': true,
         'move-file': true,

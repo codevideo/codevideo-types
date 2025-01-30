@@ -1,5 +1,6 @@
 export type FileExplorerActions = "create-file" 
  | "open-file"
+ | "close-file"
  | "rename-file"
  | "delete-file"
  | "move-file"
