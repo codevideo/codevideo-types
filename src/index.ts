@@ -15,6 +15,7 @@ export { IAuthorSnapshot } from './interfaces/toplevel/IAuthorSnapshot';
 // utility interfaces
 export { IAudioFile } from './interfaces/IAudioFile';
 export { IPoint } from './interfaces/IPoint';
+export { IEditorPosition } from './interfaces/IEditorPosition';
 export { ISpeechCaption } from './interfaces/ISpeechCaption';
 export { IFileStructure } from './interfaces/IFileStructure';
 export { FileItem } from './interfaces/IFileStructure';
