@@ -1,6 +1,6 @@
 # codevideo-types
 
-![NPM Version](https://img.shields.io/npm/v/:@fullstackcraftllc/codevideo-types)
+![NPM Version](https://img.shields.io/npm/v/@fullstackcraftllc/codevideo-types)
 
 TypeScript types used around the CodeVideo ecosystem.
 
