@@ -1,4 +1,6 @@
+import { AuthorActions } from "../types/actions/AuthorActions";
+
 export interface ISpeechCaption { 
-    speechType: 'speak-before' | 'speak-after' | 'speak-during' | '';
+    speechType: AuthorActions;
     speechValue: string;
 }

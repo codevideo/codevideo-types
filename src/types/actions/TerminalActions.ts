@@ -1,15 +1,16 @@
-export type TerminalActions = 'terminal-type'
-| 'terminal-arrow-up'
-| 'terminal-arrow-down'
-| 'terminal-arrow-left'
-| 'terminal-arrow-right'
-| 'terminal-enter'
-| 'terminal-tab'
-| 'terminal-shift+arrow-right'
-| 'terminal-shift+arrow-left'
-| 'terminal-backspace'
-| 'terminal-space'
-| 'terminal-command-left'
-| 'terminal-command-right'
-| 'terminal-command-c'
-| 'terminal-command-v';
+export type TerminalActions = "terminal-open"
+| "terminal-type"
+| "terminal-arrow-up"
+| "terminal-arrow-down"
+| "terminal-arrow-left"
+| "terminal-arrow-right"
+| "terminal-enter"
+| "terminal-tab"
+| "terminal-shift+arrow-right"
+| "terminal-shift+arrow-left"
+| "terminal-backspace"
+| "terminal-space"
+| "terminal-command-left"
+| "terminal-command-right"
+| "terminal-command-c"
+| "terminal-command-v";
