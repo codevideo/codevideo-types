@@ -22,12 +22,15 @@ export { FileItem } from './interfaces/IFileStructure';
 export { FileLeaf } from './interfaces/IFileStructure';
 export { DirectoryNode } from './interfaces/IFileStructure';
 
-// Type guards
+// Action subtype type guards
 export { isEditorAction} from './type-guards/isEditorAction';
 export { isTerminalAction } from './type-guards/isTerminalAction';
 export { isRepeatableAction } from './type-guards/isRepeatableAction';
-export { isAuthorAction } from './type-guards/isSpeakAction';
+export { isAuthorAction } from './type-guards/isAuthorAction';
 export { isFileExplorerAction } from './type-guards/isFileExplorerAction';
+export { isMouseAction } from './type-guards/isMouseAction';
+
+// Other type guards
 export { isFile } from './type-guards/isFile';
 export { isDirectory } from './type-guards/isDirectory';
 export { filterEditorActions } from './type-guards/filterEditorActions';
