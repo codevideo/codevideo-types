@@ -1,3 +1,6 @@
+import { IAuthor } from "../IAuthor";
+
+// represents one or more authors
 export interface IAuthorSnapshot {
-    currentSpeechCaption: string;
+    authors: Array<IAuthor>;
 }

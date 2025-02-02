@@ -11,7 +11,7 @@ export const validateProjectAtEndOfLesson = async (lesson: ILesson) => {
     const finalSnapshotForLesson = lesson.finalSnapshot;
 
     // from the project snapshot's file structure, get the list of files of type
-    const fileSources = getFileSourcesFromFileStructure(finalSnapshotForLesson.editorSnapshot.fileStructure);
+    const fileSources = getFileSourcesFromFileStructure(finalSnapshotForLesson.fileExplorerSnapshot.fileStructure);
 
     // use codevideo-dynamic-ast to validate that all the files in the project snapshot are valid
     const parseResult = await parseProject(fileSources); 

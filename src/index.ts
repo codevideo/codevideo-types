@@ -8,11 +8,15 @@ export { IAction } from './interfaces/IAction';
 
 // snapshot interfaces
 export { ICourseSnapshot } from './interfaces/toplevel/ICourseSnapshot';
-export { IMouseSnapshot } from './interfaces/toplevel/IMouseSnapshot';
+export { IFileExplorerSnapshot } from './interfaces/toplevel/IFileExplorerSnapshot';
 export { IEditorSnapshot } from './interfaces/toplevel/IEditorSnapshot';
+export { ITerminalSnapshot } from './interfaces/toplevel/ITerminalSnapshot';
+export { IMouseSnapshot } from './interfaces/toplevel/IMouseSnapshot';
 export { IAuthorSnapshot } from './interfaces/toplevel/IAuthorSnapshot';
 
 // utility interfaces
+export { IEditor } from './interfaces/IEditor';
+export { ITerminal } from './interfaces/ITerminal';
 export { IAudioFile } from './interfaces/IAudioFile';
 export { IPoint } from './interfaces/IPoint';
 export { IEditorPosition } from './interfaces/IEditorPosition';

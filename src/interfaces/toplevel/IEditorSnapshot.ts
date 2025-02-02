@@ -1,11 +1,6 @@
-import { IEditorPosition } from "../IEditorPosition";
-import { IFileStructure } from "../IFileStructure";
+import { IEditor } from "../IEditor";
 
+// represents a multi tabbed editor where the first openFile is considered to be the "current" file
 export interface IEditorSnapshot {
-    fileStructure: IFileStructure;
-    currentFile: string | null;
-    openFiles: Array<string>;
-    terminalContents: string | null;
-    currentCaretPosition: IEditorPosition;
-    currentHighlightCoordinates: { start: IEditorPosition, end: IEditorPosition } | null;
+    editors: Array<IEditor>;
 }
