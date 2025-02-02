@@ -1,6 +1,7 @@
 import { IEditor } from "../IEditor";
 
-// represents a multi tabbed editor where the first openFile is considered to be the "current" file
+// represents a multi tabbed editor. the 'active' editor is the one that has isActive set to true.
+// see IEditor for more information on the properties of an editor.
 export interface IEditorSnapshot {
     editors: Array<IEditor>;
 }

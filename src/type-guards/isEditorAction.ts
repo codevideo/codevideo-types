@@ -25,5 +25,7 @@ export const isEditorAction = (action: IAction): action is EditorAction => {
         'editor-command-v': true,
         'editor-shift-down-arrow': true,
         'editor-shift-up-arrow': true,
+        'editor-scroll-up': true,
+        'editor-scroll-down': true,
     };
 }

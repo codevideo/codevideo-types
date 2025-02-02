@@ -21,4 +21,6 @@ export type EditorActions = 'editor-type'
     | 'editor-command-c'
     | 'editor-command-v'
     | 'editor-shift-down-arrow'
-    | 'editor-shift-up-arrow';
+    | 'editor-shift-up-arrow'
+    | 'editor-scroll-up'
+    | 'editor-scroll-down';
