@@ -5,4 +5,5 @@ export interface IEditor {
     content: string;
     caretPosition: IEditorPosition;
     highlightCoordinates: { start: IEditorPosition, end: IEditorPosition } | null;
+    isSaved: boolean;
 }
