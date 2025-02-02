@@ -10,8 +10,7 @@ export interface BaseFileItem {
 export interface FileLeaf extends BaseFileItem {
     type: 'file';
     language: string;
-    caretPosition: { row: number; col: number };
-    cursorPosition: { x: number, y: number };
+    caretPosition: { row: number; col: number }; // each file has a caret position because editors remember where you left off in each file
 }
 
 export interface DirectoryNode extends BaseFileItem {

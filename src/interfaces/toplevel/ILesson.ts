@@ -8,5 +8,5 @@ export interface ILesson {
     description: string;
     initialSnapshot: ICourseSnapshot;
     actions: Array<IAction>;
-    finalSnapshot: ICourseSnapshot;
+    finalSnapshot?: ICourseSnapshot; // in the case where the lesson isn't complete, you of course don't have a final snapshot
 }

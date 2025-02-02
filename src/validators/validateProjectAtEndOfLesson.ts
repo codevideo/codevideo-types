@@ -3,6 +3,11 @@ import { ILesson } from "../interfaces/toplevel/ILesson";
 import { IFileStructure } from "../interfaces/IFileStructure";
 
 export const validateProjectAtEndOfLesson = async (lesson: ILesson) => {
+    // null final snapshot means the lesson is not complete!
+    if (!lesson.finalSnapshot) {
+        throw new Error(`Lesson ${lesson.id} does not have a final snapshot`);
+    }
+
     const finalSnapshotForLesson = lesson.finalSnapshot;
 
     // from the project snapshot's file structure, get the list of files of type
