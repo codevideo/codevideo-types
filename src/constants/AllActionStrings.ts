@@ -66,4 +66,6 @@ export const AllActionStrings = [
     "terminal-command-right",
     "terminal-command-c",
     "terminal-command-v",
+    // from ExternalActions
+    "external-browser"
 ];
