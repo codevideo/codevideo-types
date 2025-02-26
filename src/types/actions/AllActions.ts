@@ -3,6 +3,7 @@ import { MouseActions } from "./MouseActions";
 import { FileExplorerActions } from "./FileExplorerActions";
 import { TerminalActions } from "./TerminalActions";
 import { EditorActions } from "./EditorActions";
+import { ExternalActions } from "./ExternalActions";
 
 // all actions combines the 5 domains of the CodeVideo world
 export type AllActions =
@@ -11,4 +12,5 @@ export type AllActions =
   | EditorActions
   | MouseActions
   | TerminalActions
-  | AuthorActions;
+  | AuthorActions
+  | ExternalActions;
