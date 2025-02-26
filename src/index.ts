@@ -26,10 +26,11 @@ export { FileItem } from './interfaces/IFileStructure';
 export { FileLeaf } from './interfaces/IFileStructure';
 export { DirectoryNode } from './interfaces/IFileStructure';
 
-// project type guards
+// project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';
 export { isActions } from './type-guards/isActions';
+export { isAction } from './type-guards/isAction';
 
 // Action subtype type guards
 export { isEditorAction} from './type-guards/isEditorAction';
@@ -43,8 +44,15 @@ export { isExternalAction } from './type-guards/isExternalAction';
 // Other type guards
 export { isFile } from './type-guards/isFile';
 export { isDirectory } from './type-guards/isDirectory';
-export { filterEditorActions } from './type-guards/filterEditorActions';
+
+// "type-guard as filter"s
 export { filterAuthorActions } from './type-guards/filterSpeakActions';
+export { filterFileExplorerActions } from './type-guards/filterFileExplorerActions';
+export { filterEditorActions } from './type-guards/filterEditorActions';
+export { filterTerminalActions } from './type-guards/filterTerminalActions';
+export { filterMouseActions } from './type-guards/filterMouseActions';
+export { filterExternalActions } from './type-guards/filterExternalActions';
+
 
 // Types
 
