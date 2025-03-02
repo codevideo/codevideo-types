@@ -69,7 +69,9 @@ export const AllActionStrings = [
     "terminal-command-right",
     "terminal-command-c",
     "terminal-command-v",
+    "terminal-set-output",
     "terminal-set-prompt",
+    "terminal-set-present-working-directory",
     // from ExternalActions
     "external-browser"
 ];

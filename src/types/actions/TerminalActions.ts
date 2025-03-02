@@ -13,4 +13,7 @@ export type TerminalActions = "terminal-open"
 | "terminal-command-left"
 | "terminal-command-right"
 | "terminal-command-c"
-| "terminal-command-v";
+| "terminal-command-v"
+| "terminal-set-output"
+| "terminal-set-prompt"
+| "terminal-set-present-working-directory"

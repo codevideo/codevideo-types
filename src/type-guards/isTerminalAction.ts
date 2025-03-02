@@ -18,5 +18,8 @@ export const isTerminalAction = (action: IAction): action is TerminalAction => {
         'terminal-command-right': true,
         'terminal-command-c': true,
         'terminal-command-v': true,
+        'terminal-set-output': true,
+        'terminal-set-prompt': true,
+        'terminal-set-present-working-directory': true,
     };
 }
