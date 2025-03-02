@@ -44,6 +44,8 @@ export const AllActionStrings = [
     "file-explorer-move-file",
     "file-explorer-copy-file",
     "file-explorer-create-folder",
+    "file-explorer-expand-folder",
+    "file-explorer-collapse-folder",
     "file-explorer-rename-folder",
     "file-explorer-delete-folder",
     "file-explorer-toggle-folder",
@@ -57,6 +59,7 @@ export const AllActionStrings = [
     "terminal-arrow-left",
     "terminal-arrow-right",
     "terminal-enter",
+    "terminal-output",
     "terminal-tab",
     "terminal-shift+arrow-right",
     "terminal-shift+arrow-left",
@@ -66,6 +69,7 @@ export const AllActionStrings = [
     "terminal-command-right",
     "terminal-command-c",
     "terminal-command-v",
+    "terminal-set-prompt",
     // from ExternalActions
     "external-browser"
 ];
