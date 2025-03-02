@@ -29,8 +29,8 @@ export { DirectoryNode } from './interfaces/IFileStructure';
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';
-export { isActions } from './type-guards/isActions';
-export { isAction } from './type-guards/isAction';
+export { isValidAction } from './type-guards/isValidAction';
+export { isValidActions } from './type-guards/isValidActions';
 
 // Action subtype type guards
 export { isEditorAction} from './type-guards/isEditorAction';

@@ -1,7 +1,7 @@
 import { IAction } from "../interfaces/IAction";
 import { ICourse } from "../interfaces/toplevel/ICourse";
 import { ILesson } from "../interfaces/toplevel/ILesson";
-import { isActions } from "../type-guards/isActions";
+import { isValidActions } from "../type-guards/isValidActions";
 import { isCourse } from "../type-guards/isCourse";
 import { isLesson } from "../type-guards/isLesson";
 import { Project } from "../types/toplevel/Project";
@@ -13,7 +13,7 @@ export const convertProjectType = (
 ): Project | void => {
     // 'upgrades':
     // actions -> lesson
-    if (isActions(currentProjectContent) && targetProjectType === 'lesson') {
+    if (isValidActions(currentProjectContent) && targetProjectType === 'lesson') {
         return {
             id: '',
             name: '',
@@ -22,7 +22,7 @@ export const convertProjectType = (
         } as ILesson;
     }
     // actions -> course
-    if (isActions(currentProjectContent) && targetProjectType === 'course') {
+    if (isValidActions(currentProjectContent) && targetProjectType === 'course') {
         return {
             id: '',
             name: '',
