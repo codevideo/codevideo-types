@@ -36,6 +36,8 @@ export const AllActionStrings = [
     "mouse-click-terminal",
     "mouse-click-editor",
     // from FileExplorerActions
+    "file-explorer-set-present-working-directory",
+    "file-explorer-set-file-contents",
     "file-explorer-create-file",
     "file-explorer-open-file",
     "file-explorer-close-file",

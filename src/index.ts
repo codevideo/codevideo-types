@@ -14,6 +14,9 @@ export { ITerminalSnapshot } from './interfaces/toplevel/ITerminalSnapshot';
 export { IMouseSnapshot } from './interfaces/toplevel/IMouseSnapshot';
 export { IAuthorSnapshot } from './interfaces/toplevel/IAuthorSnapshot';
 
+// log interfaces
+export { IVirtualLayerLog } from './interfaces/logs/IVirtualLayerLog';
+
 // utility interfaces
 export { IEditor } from './interfaces/IEditor';
 export { ITerminal } from './interfaces/ITerminal';
@@ -59,6 +62,10 @@ export { filterExternalActions } from './type-guards/filterExternalActions';
 // Top-level types
 export { ProjectType } from './types/toplevel/ProjectType';
 export { Project } from './types/toplevel/Project';
+
+// Log types
+export { LogType } from './types/logs/LogType';
+export { VirtualLayerLogSource } from './types/logs/VirtualLayerLogSource';
 
 // Other types
 export { AllActions } from './types/actions/AllActions';

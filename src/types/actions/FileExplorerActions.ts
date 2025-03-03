@@ -1,4 +1,6 @@
-export type FileExplorerActions = "file-explorer-create-file" 
+export type FileExplorerActions = "file-explorer-set-present-working-directory"
+ | "file-explorer-set-file-contents"
+ | "file-explorer-create-file" 
  | "file-explorer-open-file"
  | "file-explorer-close-file"
  | "file-explorer-rename-file"
