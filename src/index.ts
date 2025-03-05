@@ -1,5 +1,7 @@
 // constants
 export { AllActionStrings } from './constants/AllActionStrings';
+export { advancedCommandValueSeparator } from './constants/advancedCommandValueSeparator';
+export { AdvancedValueActionNames } from './constants/AdvancedValueActionNames';
 
 // top-level / essential interfaces
 export { ICourse } from './interfaces/toplevel/ICourse';
@@ -86,6 +88,8 @@ export { ProgrammingLanguages } from './types/ProgrammingLanguages';
 export { EditorActions } from './types/actions/EditorActions';
 export { FileExplorerActions } from './types/actions/FileExplorerActions';
 export { AuthorAction } from './types/AuthorAction';
+export { AdvancedValueActions } from './types/actions/AdvancedValueActions';
+export { AdvancedValueAction } from './types/AdvancedValueAction';
 export { TextToSpeechOptions } from './types/TextToSpeechOptions';
 export { RepeatableActionNames } from './types/RepeatableActionNames';
 export { GUIMode } from './types/GUIMode';
