@@ -1,11 +1,11 @@
 import { IAction } from "../interfaces/IAction";
 import { ICourse } from "../interfaces/toplevel/ICourse";
 import { ILesson } from "../interfaces/toplevel/ILesson";
-import { isValidActions } from "../type-guards/isValidActions";
 import { isCourse } from "../type-guards/isCourse";
 import { isLesson } from "../type-guards/isLesson";
 import { Project } from "../types/toplevel/Project";
 import { ProjectType } from "../types/toplevel/ProjectType";
+import { isValidActions } from "../validators/isValidActions";
 
 export const convertProjectType = (
     currentProjectContent: Project,
@@ -79,3 +79,4 @@ export const convertProjectType = (
 
     return;
 }
+

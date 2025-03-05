@@ -32,8 +32,13 @@ export { DirectoryNode } from './interfaces/IFileStructure';
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';
-export { isValidAction } from './type-guards/isValidAction';
-export { isValidActions } from './type-guards/isValidActions';
+
+// validators
+export { isValidAction } from './validators/isValidAction';
+export { isValidActions } from './validators/isValidActions';
+
+// extractors
+export { extractActionsFromProject } from './extractors/extractActionsFromProject';
 
 // Action subtype type guards
 export { isEditorAction} from './type-guards/isEditorAction';
