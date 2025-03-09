@@ -54,6 +54,7 @@ export { isExternalAction } from './type-guards/isExternalAction';
 // Other type guards
 export { isFile } from './type-guards/isFile';
 export { isDirectory } from './type-guards/isDirectory';
+export { isAdvancedValueAction } from './type-guards/isAdvancedValueAction';
 
 // "type-guard as filter"s
 export { filterAuthorActions } from './type-guards/filterSpeakActions';
