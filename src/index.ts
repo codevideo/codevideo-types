@@ -30,6 +30,7 @@ export { IFileStructure } from './interfaces/IFileStructure';
 export { FileItem } from './interfaces/IFileStructure';
 export { FileLeaf } from './interfaces/IFileStructure';
 export { DirectoryNode } from './interfaces/IFileStructure';
+export { IFileEntry } from './interfaces/IFileEntry';
 
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
