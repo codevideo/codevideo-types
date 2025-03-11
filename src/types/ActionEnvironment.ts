@@ -1,1 +1,5 @@
-export type ActionEnvironment = 'monaco-single-editor' | 'visual-studio-code-web' | 'visual-studio-code-native' | 'visual-studio-code-electron'
+export type ActionEnvironment = 'monaco-single-editor' 
+| 'visual-studio-code-web' 
+| 'visual-studio-code-native' 
+| 'visual-studio-code-electron'
+| 'codevideo-ide-react'
