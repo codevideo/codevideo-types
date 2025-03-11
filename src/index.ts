@@ -32,6 +32,10 @@ export { FileLeaf } from './interfaces/IFileStructure';
 export { DirectoryNode } from './interfaces/IFileStructure';
 export { IFileEntry } from './interfaces/IFileEntry';
 
+// video related interfaces
+export { IAudioItem } from './interfaces/video/IAudioItem';
+export { ICodeVideoManifest } from './interfaces/video/ICodeVideoManifest';
+
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';
