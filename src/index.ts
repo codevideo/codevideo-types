@@ -39,6 +39,9 @@ export { ICodeVideoManifest } from './interfaces/video/ICodeVideoManifest';
 // user related interfaces
 export { ICodeVideoUserMetadata } from './interfaces/users/ICodeVideoUserMetadata';
 
+// api related interfaces
+export { IGenerateVideoFromActionsOptions } from './interfaces/api/v1/IGenerateVideoFromActionsOptions';
+
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';
