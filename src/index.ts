@@ -36,6 +36,9 @@ export { IFileEntry } from './interfaces/IFileEntry';
 export { IAudioItem } from './interfaces/video/IAudioItem';
 export { ICodeVideoManifest } from './interfaces/video/ICodeVideoManifest';
 
+// user related interfaces
+export { ICodeVideoUserMetadata } from './interfaces/users/ICodeVideoUserMetadata';
+
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';
