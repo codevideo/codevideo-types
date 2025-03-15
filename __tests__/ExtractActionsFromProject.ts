@@ -49,4 +49,15 @@ describe('extractActionsFromProject', () => {
         const result = extractActionsFromProject(invalidProject as Project, null);
         expect(result).toEqual([]);
     });
+
+    it('should not crash when an actions type project is passed', () => {
+        const actions: Project = [{ name: 'editor-type', value: 'Hello, world!' }];
+        const result = extractActionsFromProject(actions, null);
+        expect(result).toEqual(actions);
+    });
+
+    it('should not crash when undefined is passed', () => {
+        const result = extractActionsFromProject(undefined, null);
+        expect(result).toEqual([]);
+    })
 });

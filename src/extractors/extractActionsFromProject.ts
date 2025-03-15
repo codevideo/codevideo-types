@@ -4,14 +4,14 @@ import { isLesson } from "../type-guards/isLesson"
 import { Project } from "../types/toplevel/Project"
 import { isValidActions } from "../validators/isValidActions"
 
-export const extractActionsFromProject = (project: Project, currentLessonIndex: number | null): Array<IAction> => {
-    if (isCourse(project) && project.lessons && currentLessonIndex !== null && currentLessonIndex !== -1) {
+export const extractActionsFromProject = (project: Project | undefined, currentLessonIndex: number | null): Array<IAction> => {
+    if (project && isCourse(project) && project.lessons && currentLessonIndex !== null && currentLessonIndex !== -1) {
       return project.lessons[currentLessonIndex]?.actions || []
     }
-    if (isLesson(project)) {
+    if (project && isLesson(project)) {
       return project.actions
     }
-    if (isValidActions(project)) {
+    if (project && isValidActions(project)) {
       return project;
     }
     return []
