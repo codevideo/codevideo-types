@@ -17,7 +17,14 @@ export type FileExplorerActions = "file-explorer-set-present-working-directory"
  | "file-explorer-copy-folder"
  | "file-explorer-type"
  | "file-explorer-enter"
- // all new ones to support creating and renaming files in the file explorer
+ // context menus
+ | "file-explorer-show-context-menu"
+ | "file-explorer-hide-context-menu"
+ | "file-explorer-show-file-context-menu"
+ | "file-explorer-hide-file-context-menu"
+ | "file-explorer-show-folder-context-menu"
+ | "file-explorer-hide-folder-context-menu"
+ // to support creating and renaming files in the file explorer
  | "file-explorer-show-new-file-input"
  | "file-explorer-show-new-folder-input"
  | "file-explorer-hide-new-file-input"
