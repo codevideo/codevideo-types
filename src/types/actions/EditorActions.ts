@@ -23,4 +23,6 @@ export type EditorActions = 'editor-type'
     | 'editor-shift-down-arrow'
     | 'editor-shift-up-arrow'
     | 'editor-scroll-up'
-    | 'editor-scroll-down';
+    | 'editor-scroll-down'
+    | 'editor-show-context-menu'
+    | 'editor-hide-context-menu';

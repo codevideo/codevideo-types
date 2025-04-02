@@ -42,6 +42,10 @@ export { ICodeVideoUserMetadata } from './interfaces/users/ICodeVideoUserMetadat
 // api related interfaces
 export { IGenerateVideoFromActionsOptions } from './interfaces/api/v1/IGenerateVideoFromActionsOptions';
 
+// dynamic-ast related interfaces
+export { IProjectError } from './interfaces/dynamic-ast/IProjectError';
+export { IFileSource } from './interfaces/dynamic-ast/IFileSource';
+
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';
@@ -106,6 +110,7 @@ export { TextToSpeechOptions } from './types/TextToSpeechOptions';
 export { RepeatableActionNames } from './types/RepeatableActionNames';
 export { GUIMode } from './types/GUIMode';
 export { ExportType } from './types/ExportType';
+export { MouseLocation } from './types/MouseLocation'
 
 // converters
 export { convertProjectType } from './converters/convertProjectType';

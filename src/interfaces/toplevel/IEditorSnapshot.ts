@@ -4,4 +4,6 @@ import { IEditor } from "../IEditor";
 // see IEditor for more information on the properties of an editor.
 export interface IEditorSnapshot {
     editors: Array<IEditor>;
+    isEditorContextMenuOpen: boolean;
+    // isEditorTabContextMenuOpen: boolean; // TODO
 }
