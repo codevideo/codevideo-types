@@ -11,6 +11,8 @@ export interface IFileExplorerSnapshot {
     newFolderInputValue: string;
     isRenameFileInputVisible: boolean;
     isRenameFolderInputVisible: boolean;
+    originalFileBeingRenamed: string;
+    originalFolderBeingRenamed: string;
     renameFileInputValue: string;
     renameFolderInputValue: string;
 }

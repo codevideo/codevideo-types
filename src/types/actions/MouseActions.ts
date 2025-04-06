@@ -34,6 +34,10 @@ export type MouseActions =
 | "mouse-move-file-explorer-file-context-menu-rename"
 /* Moves the mouse to the center of the file context menu "Delete" row */
 | "mouse-move-file-explorer-file-context-menu-delete"
+/* Moves the mouse to the center of the folder context menu "New File..." row */
+| "mouse-move-file-explorer-folder-context-menu-new-file"
+/* Moves the mouse to the center of the folder context menu "New Folder..." row */
+| "mouse-move-file-explorer-folder-context-menu-new-folder"
 /* Moves the mouse to the center of the folder context menu "Rename" row */
 | "mouse-move-file-explorer-folder-context-menu-rename"
 /* Moves the mouse to the center of the folder context menu "Delete" row */
