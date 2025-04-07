@@ -26,10 +26,10 @@ export type MouseActions =
 | "mouse-move-to-coordinates-pixels"
 /* Moves the mouse to given percent based coordinates (value should be in x,y format) */
 | "mouse-move-to-coordinates-percent"
-/* Moves the mouse to the center of the file explorer context menu "Create New File" row */
-| "mouse-move-file-explorer-context-menu-create-new-file"
-/* Moves the mouse to the center of the file explorer context menu "Create New Folder" row */
-| "mouse-move-file-explorer-context-menu-create-new-folder"
+/* Moves the mouse to the center of the file explorer context menu "New File..." row */
+| "mouse-move-file-explorer-context-menu-new-file"
+/* Moves the mouse to the center of the file explorer context menu "New Folder..." row */
+| "mouse-move-file-explorer-context-menu-new-folder"
 /* Moves the mouse to the center of the file context menu "Rename" row */
 | "mouse-move-file-explorer-file-context-menu-rename"
 /* Moves the mouse to the center of the file context menu "Delete" row */
