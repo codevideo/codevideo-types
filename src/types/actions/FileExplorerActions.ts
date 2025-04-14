@@ -15,7 +15,6 @@ export type FileExplorerActions = "file-explorer-set-present-working-directory"
  | "file-explorer-toggle-folder"
  | "file-explorer-move-folder"
  | "file-explorer-copy-folder"
- | "file-explorer-type"
  // context menus
  | "file-explorer-show-context-menu"
  | "file-explorer-hide-context-menu"

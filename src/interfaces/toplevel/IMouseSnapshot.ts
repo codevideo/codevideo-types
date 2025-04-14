@@ -5,6 +5,7 @@ export interface IMouseSnapshot extends IPoint {
     location: MouseLocation;
     currentHoveredFileName: string;
     currentHoveredFolderName: string;
+    currentHoveredEditorTabFileName: string;
     x: number;
     y: number;
     timestamp: number;

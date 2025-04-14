@@ -114,3 +114,6 @@ export { MouseLocation } from './types/MouseLocation'
 
 // converters
 export { convertProjectType } from './converters/convertProjectType';
+
+// utils
+export { getRootFileName } from './utils/getRootFileName';

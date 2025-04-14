@@ -50,6 +50,12 @@ export type MouseActions =
 | "mouse-move-editor-context-menu-copy"
 /* Moves the mouse to the center of the “Paste” editor context menu row. If the editor context menu is not open, this is a no op. */
 | "mouse-move-editor-context-menu-paste"
+/* Moves the mouse to the save button on the unsaved changes dialog */
+| "mouse-move-unsaved-changes-dialog-button-save"
+/* Moves the mouse to the "Don't Save" button on the unsaved changes dialog */
+| "mouse-move-unsaved-changes-dialog-button-dont-save"
+/* Moves the mouse to the "Cancel" button on the unsaved changes dialog */
+| "mouse-move-unsaved-changes-dialog-button-cancel"
 | "mouse-move" // the 'composite' move action used by codevideo-mouse... might be legacy soon
 // mouse left clicks
 /* Moves the mouse to the center of the file explorer and clicks */

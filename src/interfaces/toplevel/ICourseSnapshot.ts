@@ -10,6 +10,8 @@ import { IFileExplorerSnapshot } from "./IFileExplorerSnapshot";
 // for this interface, the question we should always answer is: 
 // "do i have everything i need to recreate the entire state of the project at this exact moment in time?"
 export interface ICourseSnapshot {
+    isUnsavedChangesDialogOpen: boolean;
+    unsavedFileName: string;
     fileExplorerSnapshot: IFileExplorerSnapshot;
     editorSnapshot: IEditorSnapshot;
     terminalSnapshot: ITerminalSnapshot;
