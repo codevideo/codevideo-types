@@ -15,4 +15,6 @@ export interface IFileExplorerSnapshot {
     originalFolderBeingRenamed: string;
     renameFileInputValue: string;
     renameFolderInputValue: string;
+    newFileParentPath: string;
+    newFolderParentPath: string;
 }
