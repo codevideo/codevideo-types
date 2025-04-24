@@ -105,6 +105,8 @@ export { EditorActions } from './types/actions/EditorActions';
 export { FileExplorerActions } from './types/actions/FileExplorerActions';
 export { AuthorAction } from './types/AuthorAction';
 export { AdvancedValueActions } from './types/actions/AdvancedValueActions';
+export { SlideActions } from './types/actions/SlideActions';
+export { SlideAction } from './types/SlideAction';
 export { AdvancedValueAction } from './types/AdvancedValueAction';
 export { TextToSpeechOptions } from './types/TextToSpeechOptions';
 export { RepeatableActionNames } from './types/RepeatableActionNames';

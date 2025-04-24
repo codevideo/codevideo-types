@@ -127,5 +127,7 @@ export const AllActionStrings = [
     "terminal-set-prompt",
     "terminal-set-present-working-directory",
     // from ExternalActions
-    "external-browser"
+    "external-browser",
+    // from SlideActions
+    "slide-display",
 ];
