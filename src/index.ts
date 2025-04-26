@@ -64,6 +64,7 @@ export { isRepeatableAction } from './type-guards/isRepeatableAction';
 export { isAuthorAction } from './type-guards/isAuthorAction';
 export { isFileExplorerAction } from './type-guards/isFileExplorerAction';
 export { isMouseAction } from './type-guards/isMouseAction';
+export { isSlideAction } from './type-guards/isSlideAction';
 export { isExternalAction } from './type-guards/isExternalAction';
 
 // Other type guards
@@ -77,8 +78,8 @@ export { filterFileExplorerActions } from './type-guards/filterFileExplorerActio
 export { filterEditorActions } from './type-guards/filterEditorActions';
 export { filterTerminalActions } from './type-guards/filterTerminalActions';
 export { filterMouseActions } from './type-guards/filterMouseActions';
+export { filterSlideActions } from './type-guards/filterSlideActions';
 export { filterExternalActions } from './type-guards/filterExternalActions';
-
 
 // Types
 

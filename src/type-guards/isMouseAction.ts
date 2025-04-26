@@ -5,8 +5,3 @@ export const isMouseAction = (action: IAction): action is MouseAction => {
     // if the action starts with 'mouse-', it is a mouse action
     return action.name.startsWith('mouse-');
 }
-
-
-
-
-
