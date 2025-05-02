@@ -5,5 +5,6 @@ import { IAction } from "../interfaces/IAction";
 export const isRepeatableAction = (action: IAction) => {
   return !action.name.includes('type') && 
   !action.name.includes('speak') && 
-  !action.name.includes('file-explorer');
+  !action.name.includes('file-explorer') &&
+  !action.name.includes('slide-')
 }

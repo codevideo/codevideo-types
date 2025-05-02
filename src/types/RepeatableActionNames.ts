@@ -12,5 +12,8 @@ export type RepeatableActionNames = | "editor-arrow-up"
     | "terminal-arrow-left"
     | "terminal-arrow-right"
     | "terminal-enter"
-    | "terminal-tab";
+    | "terminal-tab"
+    // mouse actions
+    | "mouse-left-click"
+    | "mouse-right-click"
 
