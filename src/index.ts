@@ -22,6 +22,7 @@ export { IVirtualLayerLog } from './interfaces/logs/IVirtualLayerLog';
 // utility interfaces
 export { IEditor } from './interfaces/IEditor';
 export { ITerminal } from './interfaces/ITerminal';
+export { IAuthor } from './interfaces/IAuthor';
 export { IAudioFile } from './interfaces/IAudioFile';
 export { IPoint } from './interfaces/IPoint';
 export { IEditorPosition } from './interfaces/IEditorPosition';
