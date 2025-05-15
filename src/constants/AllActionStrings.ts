@@ -113,7 +113,6 @@ export const AllActionStrings = [
     "terminal-arrow-left",
     "terminal-arrow-right",
     "terminal-enter",
-    "terminal-output",
     "terminal-tab",
     "terminal-shift+arrow-right",
     "terminal-shift+arrow-left",
