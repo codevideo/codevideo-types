@@ -8,65 +8,65 @@ export const AllActionStrings = [
     "author-wait",
     // from EditorActions
     "editor-type",
-    "editor-save",
-    "editor-arrow-up",
-    "editor-arrow-down",
-    "editor-arrow-left",
-    "editor-arrow-right",
-    "editor-enter",
-    "editor-tab",
-    "editor-shift+arrow-left",
-    "editor-shift+arrow-right",
-    "editor-shift+arrow-down",
-    "editor-shift+arrow-up",
-    "editor-cmd+d",
-    "editor-backspace",
-    "editor-space",
+    "editor-save", // repeatable
+    "editor-arrow-up", // repeatable
+    "editor-arrow-down", // repeatable
+    "editor-arrow-left", // repeatable
+    "editor-arrow-right", // repeatable
+    "editor-enter", // repeatable
+    "editor-tab", // repeatable
+    "editor-shift+arrow-left", // repeatable
+    "editor-shift+arrow-right", // repeatable
+    "editor-shift+arrow-down", // repeatable
+    "editor-shift+arrow-up", // repeatable
+    "editor-cmd+d", // repeatable
+    "editor-backspace", // repeatable
+    "editor-space", // repeatable
     "editor-highlight-code",
     "editor-delete-line",
-    "editor-command-left",
-    "editor-command-right",
-    "editor-command-d",
-    "editor-command-c",
-    "editor-command-v",
-    "editor-shift-down-arrow",
-    "editor-shift-up-arrow",
+    "editor-command-left", // repeatable
+    "editor-command-right", // repeatable
+    "editor-command-d", // repeatable
+    "editor-command-c", // repeatable
+    "editor-command-v", // repeatable
+    "editor-shift-down-arrow", // repeatable
+    "editor-shift-up-arrow", // repeatable
     // from MouseActions
-    "mouse-move-file-explorer",
-    "mouse-move-editor",
-    "mouse-move-editor-tab",
-    "mouse-move-editor-tab-close",
-    "mouse-move-terminal",
-    "mouse-move-terminal-tab",
-    "mouse-move-terminal-tab-close",
-    "mouse-move-file-explorer-file",
-    "mouse-move-file-explorer-folder",
-    "mouse-move-to-coordinates-pixels",
-    "mouse-move-to-coordinates-percent",
-    "mouse-move-file-explorer-context-menu-new-file",
-    "mouse-move-file-explorer-context-menu-new-folder",
-    "mouse-move-file-explorer-file-context-menu-rename",
-    "mouse-move-file-explorer-file-context-menu-delete",
-    "mouse-move-file-explorer-folder-context-menu-new-file",
-    "mouse-move-file-explorer-folder-context-menu-new-folder",
-    "mouse-move-file-explorer-folder-context-menu-rename",
-    "mouse-move-file-explorer-folder-context-menu-delete",
-    "mouse-move-editor-context-menu-go-to-definition",
-    "mouse-move-editor-context-menu-cut",
-    "mouse-move-editor-context-menu-copy",
-    "mouse-move-editor-context-menu-paste",
-    "mouse-move-unsaved-changes-dialog-button-save",
-    "mouse-move-unsaved-changes-dialog-button-dont-save",
-    "mouse-move-unsaved-changes-dialog-button-cancel",
-    "mouse-move",
-    "mouse-left-click",
-    "mouse-double-left-click",
-    "mouse-triple-left-click",
-    "mouse-right-click",
-    "mouse-right-double-click",
-    "mouse-right-triple-click",
+    "mouse-move-file-explorer", // repeatable
+    "mouse-move-editor", // repeatable
+    "mouse-move-editor-tab", // not repeatable, needs the tab name
+    "mouse-move-editor-tab-close", // not repeatable, needs the tab name
+    "mouse-move-terminal", // repeatable
+    "mouse-move-terminal-tab", // NOT repeatable, needs the tab name
+    "mouse-move-terminal-tab-close", // NOT repeatable, needs the tab name
+    "mouse-move-file-explorer-file", // NOT repeatable, needs the file name
+    "mouse-move-file-explorer-folder", // NOT repeatable, needs the folder name
+    "mouse-move-to-coordinates-pixels", // NOT repeatable, needs the coordinates in pixels
+    "mouse-move-to-coordinates-percent", // NOT repeatable, needs the coordinates in percent
+    "mouse-move-file-explorer-context-menu-new-file", // repeatable
+    "mouse-move-file-explorer-context-menu-new-folder", // repeatable
+    "mouse-move-file-explorer-file-context-menu-rename", // repeatable
+    "mouse-move-file-explorer-file-context-menu-delete", // repeatable
+    "mouse-move-file-explorer-folder-context-menu-new-file", // repeatable
+    "mouse-move-file-explorer-folder-context-menu-new-folder", // repeatable
+    "mouse-move-file-explorer-folder-context-menu-rename", // repeatable
+    "mouse-move-file-explorer-folder-context-menu-delete", // repeatable
+    "mouse-move-editor-context-menu-go-to-definition", // repeatable
+    "mouse-move-editor-context-menu-cut", // repeatable
+    "mouse-move-editor-context-menu-copy", // repeatable
+    "mouse-move-editor-context-menu-paste", // repeatable
+    "mouse-move-unsaved-changes-dialog-button-save", // repeatable
+    "mouse-move-unsaved-changes-dialog-button-dont-save", // repeatable
+    "mouse-move-unsaved-changes-dialog-button-cancel", // repeatable
+    "mouse-move", // NOT repeatable, needs the coordinates and times array
+    "mouse-left-click", // repeatable
+    "mouse-double-left-click", // repeatable
+    "mouse-triple-left-click", // repeatable
+    "mouse-right-click", // repeatable
+    "mouse-right-double-click", // repeatable
+    "mouse-right-triple-click", // repeatable
     // from FileExplorerActions
-    "file-explorer-set-present-working-directory",
+    "file-explorer-set-present-working-directory", // not repeatable, needs the path
     "file-explorer-set-file-contents",
     "file-explorer-create-file",
     "file-explorer-open-file",
@@ -92,7 +92,7 @@ export const AllActionStrings = [
     "file-explorer-show-new-file-input",
     "file-explorer-show-new-folder-input",
     "file-explorer-hide-new-file-input",
-    "file-explorer-hide-new-folder-input",
+    "file-explorer-hide-new-folder-input", 
     "file-explorer-type-new-file-input",
     "file-explorer-clear-new-file-input",
     "file-explorer-type-new-folder-input",
@@ -101,27 +101,27 @@ export const AllActionStrings = [
     "file-explorer-rename-folder-draft-state",
     "file-explorer-type-rename-file-input",
     "file-explorer-type-rename-folder-input",
-    "file-explorer-enter-new-file-input",
-    "file-explorer-enter-new-folder-input",
-    "file-explorer-enter-rename-file-input",
-    "file-explorer-enter-rename-folder-input",
+    "file-explorer-enter-new-file-input", // repeatable
+    "file-explorer-enter-new-folder-input", // repeatable
+    "file-explorer-enter-rename-file-input", // repeatable   
+    "file-explorer-enter-rename-folder-input", // repeatable
     // from TerminalActions
     "terminal-open",
     "terminal-type",
-    "terminal-arrow-up",
-    "terminal-arrow-down",
-    "terminal-arrow-left",
-    "terminal-arrow-right",
-    "terminal-enter",
-    "terminal-tab",
-    "terminal-shift+arrow-right",
-    "terminal-shift+arrow-left",
-    "terminal-backspace",
-    "terminal-space",
-    "terminal-command-left",
-    "terminal-command-right",
-    "terminal-command-c",
-    "terminal-command-v",
+    "terminal-arrow-up", // repeatable
+    "terminal-arrow-down", // repeatable
+    "terminal-arrow-left", // repeatable
+    "terminal-arrow-right", // repeatable
+    "terminal-enter", // repeatable
+    "terminal-tab", // repeatable
+    "terminal-shift+arrow-right", // repeatable
+    "terminal-shift+arrow-left", // repeatable
+    "terminal-backspace", // repeatable
+    "terminal-space", // repeatable
+    "terminal-command-left", // repeatable
+    "terminal-command-right", // repeatable
+    "terminal-command-c", // repeatable
+    "terminal-command-v", // repeatable
     "terminal-set-output",
     "terminal-set-prompt",
     "terminal-set-present-working-directory",
