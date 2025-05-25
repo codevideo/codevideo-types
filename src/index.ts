@@ -121,3 +121,4 @@ export { convertProjectType } from './converters/convertProjectType';
 
 // utils
 export { getRootFileName } from './utils/getRootFileName';
+export { getBlankInitialSnapshot } from './utils/getBlankInitialSnapshot';
