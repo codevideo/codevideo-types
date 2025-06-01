@@ -1,4 +1,5 @@
 import { IAction } from "../IAction";
+import { ICodeVideoIDEProps } from "../ICodeVideoIDEProps";
 import { ILesson } from "../toplevel/ILesson";
 import { IAudioItem } from "./IAudioItem";
 
@@ -12,4 +13,5 @@ export interface ICodeVideoManifest {
   currentLessonIndex: number;
   audioItems: Array<IAudioItem>;
   error?: string;
+  codeVideoIDEProps?: ICodeVideoIDEProps;
 }

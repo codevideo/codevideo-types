@@ -33,6 +33,9 @@ export { FileLeaf } from './interfaces/IFileStructure';
 export { DirectoryNode } from './interfaces/IFileStructure';
 export { IFileEntry } from './interfaces/IFileEntry';
 
+// React component props interface
+export { ICodeVideoIDEProps } from './interfaces/ICodeVideoIDEProps';
+
 // video related interfaces
 export { IAudioItem } from './interfaces/video/IAudioItem';
 export { ICodeVideoManifest } from './interfaces/video/ICodeVideoManifest';
