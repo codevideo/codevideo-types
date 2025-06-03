@@ -68,6 +68,7 @@ export const AllActionStrings = [
     // from FileExplorerActions
     "file-explorer-set-present-working-directory", // not repeatable, needs the path
     "file-explorer-set-file-contents",
+    "file-explorer-set-file-caret-position", // not repeatable, needs the file name, row, and col
     "file-explorer-create-file",
     "file-explorer-open-file",
     "file-explorer-close-file",

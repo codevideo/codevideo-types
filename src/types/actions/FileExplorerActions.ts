@@ -1,5 +1,6 @@
 export type FileExplorerActions = "file-explorer-set-present-working-directory"
  | "file-explorer-set-file-contents"
+ | "file-explorer-set-file-caret-position"
  | "file-explorer-create-file" 
  | "file-explorer-open-file"
  | "file-explorer-close-file"
