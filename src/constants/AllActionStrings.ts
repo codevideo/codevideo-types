@@ -31,6 +31,10 @@ export const AllActionStrings = [
     "editor-command-v", // repeatable
     "editor-shift-down-arrow", // repeatable
     "editor-shift-up-arrow", // repeatable
+    "editor-scroll-up", // not repeatable, needs the number of pixel offset
+    "editor-scroll-down", // not repeatable, needs the number of pixel offset
+    "editor-show-context-menu", // repeatable, typically always '1'
+    "editor-hide-context-menu", // repeatable, typically always '1'
     // from MouseActions
     "mouse-move-file-explorer", // repeatable
     "mouse-move-editor", // repeatable
@@ -128,6 +132,8 @@ export const AllActionStrings = [
     "terminal-set-present-working-directory",
     // from ExternalActions
     "external-browser",
+    "external-browser-scroll",
+    "external-web-preview",
     // from SlideActions
     "slide-display",
 ];

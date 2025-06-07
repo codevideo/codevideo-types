@@ -1,1 +1,1 @@
-export type ExternalActions = "external-browser";
+export type ExternalActions = "external-browser" | "external-browser-scroll" | "external-web-preview";
