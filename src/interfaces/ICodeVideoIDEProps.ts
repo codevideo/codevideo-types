@@ -34,5 +34,6 @@ export interface ICodeVideoIDEProps {
   keyboardTypingPauseMs?: number;
   standardPauseMs?: number;
   longPauseMs?: number;
-  resolution: '1080p' | '4K'
+  resolution: '1080p' | '4K';
+  showDevBox?: boolean;
 }
