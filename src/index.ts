@@ -1,4 +1,5 @@
 // constants
+export { AllActionDescriptions } from './constants/AllActionDescriptions';
 export { AllActionStrings } from './constants/AllActionStrings';
 export { advancedCommandValueSeparator } from './constants/advancedCommandValueSeparator';
 export { AdvancedValueActionNames } from './constants/AdvancedValueActionNames';
