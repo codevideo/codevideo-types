@@ -68,7 +68,6 @@ export const AllActionDescriptions: Array<{ name: string, description: string, v
     { name: "mouse-right-double-click", description: "Move the mouse performs a double right click.", valueDescription: "The number of times to perform a double right click - should typically be '1'." }, // repeatable
     { name: "mouse-right-triple-click", description: "Move the mouse performs a triple right click.", valueDescription: "The number of times to perform a triple right click - should typically be '1'." }, // repeatable
     // from FileExplorerActions
-    { name: "file-explorer-set-present-working-directory", description: "Sets the present working directory in the file explorer.", valueDescription: "The path to set as the present working directory." }, // not repeatable, needs the path
     { name: "file-explorer-set-file-contents", description: "Set file contents of a file in the file explorer.", valueDescription: "The contents to set for the file." },
     { name: "file-explorer-set-file-caret-position", description: "Sets the caret position of a file in the file explorer.", valueDescription: "The file name, row, and col to set the caret position." }, // not repeatable, needs the file name, row, and col
     { name: "file-explorer-create-file", description: "Create a file in the file explorer.", valueDescription: "The name of the file to create." },

@@ -132,7 +132,6 @@ describe("isRepeatableAction", () => {
 
     //     it("should return false for file-explorer actions", () => {
     //         const fileExplorerActions: IAction[] = [
-    //             { name: "file-explorer-set-present-working-directory", value: "/src" },
     //             { name: "file-explorer-set-file-contents", value: "console.log('hello');" },
     //             { name: "file-explorer-create-file", value: "index.js" },
     //             { name: "file-explorer-open-file", value: "package.json" },
