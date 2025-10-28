@@ -27,10 +27,13 @@ describe("Validators", () => {
             ]
 
             // act
-            const isValid = isValidActions(actions)
+            const result = isValidActions(actions)
 
             // assert
-            expect(isValid).toBeFalsy()
+            expect(result.isValid).toBeFalsy()
+            expect(result.errors).toHaveLength(1)
+            expect(result.errors[0].actionIndex).toBe(3)
+            expect(result.errors[0].message).toContain("Invalid action")
         })
 
         it("should validate an advanced value action that has the separator", () => {
@@ -43,10 +46,11 @@ describe("Validators", () => {
             ]
 
             // act
-            const isValid = isValidActions(actions)
+            const result = isValidActions(actions)
 
             // assert that validation passes
-            expect(isValid).toBeTruthy()
+            expect(result.isValid).toBeTruthy()
+            expect(result.errors).toHaveLength(0)
         })
 
         it("should NOT validate an advanced value action that does NOT have the specified separator", () => {
@@ -59,10 +63,12 @@ describe("Validators", () => {
             ]
 
             // act
-            const isValid = isValidActions(actions)
+            const result = isValidActions(actions)
 
             // assert that validation fails
-            expect(isValid).toBeFalsy()
+            expect(result.isValid).toBeFalsy()
+            expect(result.errors).toHaveLength(1)
+            expect(result.errors[0].actionIndex).toBe(0)
         })
 
         it("should NOT validate an advanced value action that does NOT have the separator at all", () => {
@@ -75,10 +81,12 @@ describe("Validators", () => {
             ]
 
             // act
-            const isValid = isValidActions(actions)
+            const result = isValidActions(actions)
 
             // assert that validation fails
-            expect(isValid).toBeFalsy()
+            expect(result.isValid).toBeFalsy()
+            expect(result.errors).toHaveLength(1)
+            expect(result.errors[0].actionIndex).toBe(0)
         })
     })
 })

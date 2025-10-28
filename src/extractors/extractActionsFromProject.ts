@@ -11,8 +11,8 @@ export const extractActionsFromProject = (project: Project | undefined, currentL
     if (project && isLesson(project)) {
       return project.actions
     }
-    if (project && isValidActions(project)) {
-      return project;
+    if (project && isValidActions(project).isValid) {
+      return project as Array<IAction>;
     }
     return []
   }

@@ -1,14 +1,31 @@
-import { IAction } from "../interfaces/IAction";
+import { IActionValidationError } from "../interfaces/IActionValidationError";
+import { IActionValidationResult } from "../interfaces/IActionValidationResult";
 import { Project } from "../types/toplevel/Project";
 import { isValidAction } from "./isValidAction";
 
-export const isValidActions = (project: Project): project is Array<IAction> => {
-    // ensure that project is type of array and that every element is valid action
-    return Array.isArray(project) && project.every((action, index) => {
+export const isValidActions = (project: Project): IActionValidationResult => {
+    const errors: IActionValidationError[] = [];
+    
+    // Check if project is an array
+    if (!Array.isArray(project)) {
+        errors.push({
+            message: "Project must be an array",
+            actionIndex: -1
+        });
+        return { isValid: false, errors };
+    }
+    
+    // Validate each action
+    project.forEach((action, index) => {
         const result = isValidAction(action);
         if (!result) {
-            console.log(`Invalid action at action index ${index}: ${JSON.stringify(action)}`);
+            errors.push({
+                message: `Invalid action at action index ${index}: ${JSON.stringify(action)}`,
+                actionIndex: index
+            });
         }
-        return result;
     });
+    
+    const isValid = errors.length === 0;
+    return { isValid, errors };
 }

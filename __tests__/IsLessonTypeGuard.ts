@@ -315,8 +315,12 @@ describe('isLesson type guard', () => {
       "value": "1"
     },
     {
-      "name": "file-explorer-create-file",
-      "value": "~/typescript/package.json"
+      "name": "terminal-type",
+      "value": "touch ~/typescript/package.json"
+    },
+    {
+      "name": "terminal-enter",
+      "value": "1"
     },
     {
       "name": "file-explorer-set-file-contents",
