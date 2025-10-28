@@ -132,5 +132,12 @@ export const AllActionDescriptions: Array<{ name: string, description: string, v
     { name: "external-browser-scroll", description: "Scrolls the external browser.", valueDescription: "The number of pixels offset to scroll in the external browser." },
     { name: "external-web-preview", description: "Preview the current codebase in an external web browser", valueDescription: "The number of times to open the preview - should typically be '1'." },
     // from SlideActions
-    { name: "slide-display", description: "Show a slide. The value can be any valid markdown representing the slide.", valueDescription: "The markdown content of the slide." }
+    { name: "slide-display", description: "Show a slide. The value can be any valid markdown representing the slide.", valueDescription: "The markdown content of the slide." },
+    // from CompositeActions
+    { name: "composite-create-file-with-mouse", description: "Composite action to create a file using the mouse in the file explorer.", valueDescription: "The name of the file to create." },
+    { name: "composite-create-file-with-terminal", description: "Composite action to create a file using the terminal.", valueDescription: "The name of the file to create." },
+    { name: "composite-create-folder-with-mouse", description: "Composite action to create a folder using the mouse in the file explorer.", valueDescription: "The name of the folder to create." },
+    { name: "composite-create-folder-with-terminal", description: "Composite action to create a folder using the terminal.", valueDescription: "The name of the folder to create." },
+    { name: "composite-close-all-editors-with-mouse", description: "Composite action to close all open editors using the mouse.", valueDescription: "The number of times to execute this action - should typically be '1'." },
+    { name: "composite-close-all-editors-with-keyboard", description: "Composite action to close all open editors using a keyboard shortcut.", valueDescription: "The number of times to execute this action - should typically be '1'." }
 ]
