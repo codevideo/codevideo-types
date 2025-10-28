@@ -59,6 +59,10 @@ export { isCourse } from './type-guards/isCourse';
 export { isValidAction } from './validators/isValidAction';
 export { isValidActions } from './validators/isValidActions';
 
+// validator related interfaces
+export { IActionValidationError } from './interfaces/IActionValidationError';
+export { IActionValidationResult } from './interfaces/IActionValidationResult';
+
 // extractors
 export { extractActionsFromProject } from './extractors/extractActionsFromProject';
 
@@ -71,6 +75,7 @@ export { isFileExplorerAction } from './type-guards/isFileExplorerAction';
 export { isMouseAction } from './type-guards/isMouseAction';
 export { isSlideAction } from './type-guards/isSlideAction';
 export { isExternalAction } from './type-guards/isExternalAction';
+export { isCompositeAction } from './type-guards/isCompositeAction';
 
 // Other type guards
 export { isFile } from './type-guards/isFile';

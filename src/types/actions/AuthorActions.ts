@@ -1,1 +1,4 @@
-export type AuthorActions = "author-speak-before" | "author-speak-after" | "author-speak-during" | "author-wait";
+export type AuthorActions = "author-speak-before" 
+| "author-speak-after" 
+| "author-speak-during" 
+| "author-wait";
