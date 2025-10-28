@@ -13,16 +13,16 @@ export const convertProjectType = (
 ): Project | void => {
     // 'upgrades':
     // actions -> lesson
-    if (isValidActions(currentProjectContent) && targetProjectType === 'lesson') {
+    if (isValidActions(currentProjectContent).isValid && targetProjectType === 'lesson') {
         return {
             id: '',
             name: '',
             description: '',
-            actions: currentProjectContent,
+            actions: currentProjectContent as Array<IAction>,
         } as ILesson;
     }
     // actions -> course
-    if (isValidActions(currentProjectContent) && targetProjectType === 'course') {
+    if (isValidActions(currentProjectContent).isValid && targetProjectType === 'course') {
         return {
             id: '',
             name: '',
@@ -33,7 +33,7 @@ export const convertProjectType = (
                     id: '',
                     name: '',
                     description: '',
-                    actions: currentProjectContent,
+                    actions: currentProjectContent as Array<IAction>,
                 }
             ]
         } as ICourse;
