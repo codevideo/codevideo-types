@@ -1,6 +1,6 @@
 import { IAction } from "../interfaces/IAction"
 
-export const generateActionsForCreateFileWithMouse = (fileName: string): Array<IAction> => {
+export const generateActionsForCreateFileWithTerminal = (fileName: string): Array<IAction> => {
     return [
         {
             "name": "mouse-move-terminal",
