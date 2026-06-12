@@ -1,6 +1,6 @@
 {
   "name": "@fullstackcraftllc/codevideo-types",
-  "version": "2.1.33",
+  "version": "2.2.0",
   "description": "TypeScript types for the CodeVideo ecosystem.",
   "type": "module",
   "main": "dist/index.js",
