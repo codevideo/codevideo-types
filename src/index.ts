@@ -1,4 +1,6 @@
 // constants
+export { SteppableAction } from './types/SteppableAction';
+export { isSteppableAction } from './type-guards/isSteppableAction';
 export { AllActionDescriptions } from './constants/AllActionDescriptions';
 export { AllActionStrings } from './constants/AllActionStrings';
 export { advancedCommandValueSeparator } from './constants/advancedCommandValueSeparator';
@@ -92,6 +94,7 @@ export { filterSlideActions } from './type-guards/filterSlideActions';
 export { filterExternalActions } from './type-guards/filterExternalActions';
 
 // Types
+export type { RenderMode } from './types/RenderMode';
 
 // Top-level types
 export { ProjectType } from './types/toplevel/ProjectType';
@@ -131,3 +134,5 @@ export { convertProjectType } from './converters/convertProjectType';
 // utils
 export { getRootFileName } from './utils/getRootFileName';
 export { getBlankInitialSnapshot } from './utils/getBlankInitialSnapshot';
+
+export type { RenderStrategy } from './types/RenderStrategy';

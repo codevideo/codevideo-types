@@ -1,5 +1,7 @@
 import { GUIMode } from "../types/GUIMode";
 import { Project } from "../types/toplevel/Project";
+import { RenderMode } from "../types/RenderMode";
+import { IAudioItem } from "./video/IAudioItem";
 
 /**
  * Props for the CodeVideoIDE React component (@fullstackcraftllc/codevideo-ide-react).
@@ -10,6 +12,10 @@ import { Project } from "../types/toplevel/Project";
  * `actionFinishedCallback` to drive playback.
  */
 export interface ICodeVideoIDEProps {
+  /** Experimental deterministic replay. Defaults to realtime. */
+  renderMode?: RenderMode;
+  /** Stable seed for action-scoped randomness in deterministic replay. */
+  renderSeed?: string;
   /** Color theme for the IDE chrome and the Monaco editor ('vs' / 'vs-dark'). */
   theme: 'light' | 'dark';
   /** The content to drive the IDE: a raw actions array, a single lesson, or a whole course. */
@@ -60,10 +66,7 @@ export interface ICodeVideoIDEProps {
    * with the action's value. When no match is found, the component falls back
    * to speech synthesis.
    */
-  speakActionAudios: Array<{
-    text: string,
-    mp3Url: string
-  }>;
+  speakActionAudios: Array<IAudioItem>;
   /** Width of the file explorer pane in pixels. */
   fileExplorerWidth?: number;
   /** Height of the terminal pane in pixels. */
@@ -94,6 +97,10 @@ export interface ICodeVideoIDEProps {
   isTerminalVisible?: boolean;
   /** Delay between simulated keystrokes in editor/terminal/input typing animations. Default 50ms. */
   keyboardTypingPauseMs?: number;
+  /** Insert seeded, corrected keyboard typos during replay. Default false. */
+  includeTypos?: boolean;
+  /** Seeded integer variation around each typing delay; 0..keyboardTypingPauseMs. Default 0. */
+  keyboardTypingJitterMs?: number;
   /** Pause for non-typing animation beats (mouse movement, file operations, scrolling). Default 1000ms. */
   standardPauseMs?: number;
   /** Long pause reserved for slide and external display steps. Default 5000ms. */

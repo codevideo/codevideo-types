@@ -1,5 +1,11 @@
 # codevideo-types
 
+Experimental renderer metadata is optional: `RenderMode` is `realtime` or
+`deterministic`; `ICodeVideoIDEProps` accepts `renderMode` and `renderSeed`.
+`ICodeVideoManifest` additionally accepts `renderWorkers`. Omitted mode remains
+realtime. `IAudioItem` can carry `actionIndex`, `assetId` and measured `durationMs`
+for offline speech timing; existing text/MP3 URL producers remain compatible.
+
 ![NPM Version](https://img.shields.io/npm/v/@fullstackcraftllc/codevideo-types)
 
 TypeScript types used around the CodeVideo ecosystem.
@@ -29,4 +35,3 @@ Action values are always strings, but typically represent a number when they are
 ### Project Snapshots
 
 A project snapshot is a snapshot of the state of a project at a given point in time. It is represented by the [`IProjectSnapshot`](./src/interfaces/IProjectSnapshot.ts) interface. Any instance of `IProjectSnapshot` can be derived by evaluating the actions in the project up to the point in time that the snapshot was taken.
-
