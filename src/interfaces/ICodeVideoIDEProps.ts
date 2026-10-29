@@ -93,6 +93,12 @@ export interface ICodeVideoIDEProps {
   requestPlaybackStartCallback?: () => void;
   /** Render the file explorer pane. Default true. */
   isFileExplorerVisible?: boolean
+  /** Render the editor tab bar and filenames. Default true. */
+  isEditorTabsVisible?: boolean;
+  /** Render the Monaco minimap. Default true. */
+  isMinimapVisible?: boolean;
+  /** Visually wrap long lines without changing source text. Default 'on'. */
+  wordWrap?: 'on' | 'off';
   /** Render the terminal pane. Default true. */
   isTerminalVisible?: boolean;
   /** Delay between simulated keystrokes in editor/terminal/input typing animations. Default 50ms. */

@@ -22,6 +22,10 @@ export const AllActionDescriptions: Array<{ name: string, description: string, v
     { name: "editor-space", description: "Press the Space key in the editor.", valueDescription: "The number of times to press Space." }, // repeatable
     { name: "editor-highlight-code", description: "Highlight code in the editor.", valueDescription: "The code to highlight." },
     { name: "editor-delete-line", description: "Delete the current line in the editor.", valueDescription: "The line to delete." },
+    { name: "editor-command+shift+arrow-right", description: "Extend selection to the end of the logical line, excluding the newline.", valueDescription: "Number of key presses." },
+    { name: "editor-command+shift+arrow-left", description: "Extend selection to the absolute start of the logical line, excluding the newline.", valueDescription: "Number of key presses." },
+    { name: "editor-shift+end", description: "Extend selection to the end of the logical line, excluding the newline.", valueDescription: "Number of key presses." },
+    { name: "editor-shift+home", description: "Extend selection to the absolute start of the logical line, excluding the newline.", valueDescription: "Number of key presses." },
     { name: "editor-command-left", description: "Hold Command and move the editor caret left.", valueDescription: "The number of columns to move left." }, // repeatable
     { name: "editor-command-right", description: "Hold Command and move the editor caret right.", valueDescription: "The number of columns to move right." }, // repeatable
     { name: "editor-command-d", description: "Hold Command and press D in the editor.", valueDescription: "The number of times to press Cmd+D." }, // repeatable
