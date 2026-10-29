@@ -101,6 +101,8 @@ export interface ICodeVideoIDEProps {
   wordWrap?: 'on' | 'off';
   /** Render the terminal pane. Default true. */
   isTerminalVisible?: boolean;
+  /** Render the animated mouse cursor. Mouse actions keep their timing and effects when hidden. Default true. */
+  isMouseVisible?: boolean;
   /** Delay between simulated keystrokes in editor/terminal/input typing animations. Default 50ms. */
   keyboardTypingPauseMs?: number;
   /** Insert seeded, corrected keyboard typos during replay. Default false. */
