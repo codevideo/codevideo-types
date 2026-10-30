@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run type-check
+      - run: npm test
+      - run: npm run build
+
+  # estimateActionDurationsMs has a Go twin in codevideo-cli (cli/estimate) and
+  # both check the same fixture. A change to the estimate has to land in both
+  # repos; until it does, this job says so.
+  estimate-fixture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare with codevideo-cli's copy
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/codevideo/codevideo-cli/main/cli/estimate/testdata/estimate-cases.json -o cli-estimate-cases.json
+          if ! diff -u cli-estimate-cases.json __tests__/fixtures/estimate-cases.json; then
+            echo "::error::__tests__/fixtures/estimate-cases.json differs from codevideo-cli's cli/estimate/testdata/estimate-cases.json. Keep both copies (and both estimators) in step."
+            exit 1
+          fi

@@ -134,5 +134,7 @@ export { convertProjectType } from './converters/convertProjectType';
 // utils
 export { getRootFileName } from './utils/getRootFileName';
 export { getBlankInitialSnapshot } from './utils/getBlankInitialSnapshot';
+export { estimateActionDurationsMs, estimateVideoDurationInSeconds } from './utils/estimateVideoDuration';
+export type { IEstimateOptions } from './utils/estimateVideoDuration';
 
 export type { RenderStrategy } from './types/RenderStrategy';
