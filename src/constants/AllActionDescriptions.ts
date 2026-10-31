@@ -20,7 +20,7 @@ export const AllActionDescriptions: Array<{ name: string, description: string, v
     { name: "editor-cmd+d", description: "Press Cmd+D in the editor.", valueDescription: "The number of times to press Cmd+D." }, // repeatable
     { name: "editor-backspace", description: "Press the Backspace key in the editor.", valueDescription: "The number of times to press Backspace." }, // repeatable
     { name: "editor-space", description: "Press the Space key in the editor.", valueDescription: "The number of times to press Space." }, // repeatable
-    { name: "editor-highlight-code", description: "Highlight code in the editor.", valueDescription: "The code to highlight." },
+    { name: "editor-highlight-code", description: "Not supported yet: the IDE and the renderer ignore it, so nothing happens. To point at code, bring its file forward with mouse-move-editor-tab and talk about it.", valueDescription: "The code to highlight." },
     { name: "editor-delete-line", description: "Delete the current line in the editor.", valueDescription: "The line to delete." },
     { name: "editor-command+shift+arrow-right", description: "Extend selection to the end of the logical line, excluding the newline.", valueDescription: "Number of key presses." },
     { name: "editor-command+shift+arrow-left", description: "Extend selection to the absolute start of the logical line, excluding the newline.", valueDescription: "Number of key presses." },
@@ -40,8 +40,8 @@ export const AllActionDescriptions: Array<{ name: string, description: string, v
     // from MouseActions
     { name: "mouse-move-file-explorer", description: "Move the mouse to the middle of the file explorer.", valueDescription: "The number of times to move to the middle of the file explorer - should typically be '1'." }, // repeatable
     { name: "mouse-move-editor", description: "Move the mouse in the editor.", valueDescription: "The number of times to move in the editor." }, // repeatable
-    { name: "mouse-move-editor-tab", description: "Move the mouse over an editor tab.", valueDescription: "The file name of the tab to move over." }, // not repeatable, needs the tab name
-    { name: "mouse-move-editor-tab-close", description: "Move the mouse over the close button of an editor tab.", valueDescription: "The name of the tab to move over." }, // not repeatable, needs the tab name
+    { name: "mouse-move-editor-tab", description: "Move the mouse over an editor tab.", valueDescription: "The open file's path, e.g. 'src/index.ts'." }, // not repeatable, needs the tab name
+    { name: "mouse-move-editor-tab-close", description: "Move the mouse over the close button of an editor tab.", valueDescription: "The open file's path, e.g. 'src/index.ts'." }, // not repeatable, needs the tab name
     { name: "mouse-move-terminal", description: "Move the mouse in the terminal.", valueDescription: "The number of times to move in the terminal." }, // repeatable
     { name: "mouse-move-terminal-tab", description: "Move the mouse over a terminal tab.", valueDescription: "The name of the tab to move over." }, // NOT repeatable, needs the tab name
     { name: "mouse-move-terminal-tab-close", description: "Move the mouse over the close button of a terminal tab.", valueDescription: "The name of the tab to move over." }, // NOT repeatable, needs the tab name

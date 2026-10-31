@@ -16,7 +16,12 @@ it.each(RepeatableActionNames)('%s says its value is a count', name => {
   expect(rowFor(name)?.valueDescription).toMatch(/number of|'1'/i);
 });
 
-it.each(AllActionDescriptions.filter(description => description.name.startsWith('composite-')).map(description => description.name))(
+// Declared but implemented by neither the VirtualIDE nor the renderer yet.
+const unsupported = AllActionDescriptions
+  .map(description => description.name)
+  .filter(name => name.startsWith('composite-') || name === 'editor-highlight-code');
+
+it.each(unsupported)(
   '%s says it is not supported yet', name => {
     expect(rowFor(name)?.description).toMatch(/^Not supported yet/);
   },
