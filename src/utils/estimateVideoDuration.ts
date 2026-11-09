@@ -28,6 +28,7 @@ const KEY_PRESSES = new Set<string>([
     "editor-shift+end", "editor-shift+home",
     "editor-command-left", "editor-command-right",
     "editor-tab", "editor-enter", "editor-space", "editor-backspace",
+    "editor-command-c", "editor-command-x", "editor-command-v",
 ]);
 
 /**
