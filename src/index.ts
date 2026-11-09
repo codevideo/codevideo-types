@@ -53,6 +53,14 @@ export { IGenerateVideoFromActionsOptions } from './interfaces/api/v1/IGenerateV
 export { IProjectError } from './interfaces/dynamic-ast/IProjectError';
 export { IFileSource } from './interfaces/dynamic-ast/IFileSource';
 
+// diagnostics (TypeScript squiggles): shared by codevideo-ide-react and codevideo-mcp
+export type { ICodeVideoDiagnostic, IDiagnosticLocation, DiagnosticSeverity } from './interfaces/diagnostics/ICodeVideoDiagnostic';
+export { DIAGNOSTICS_TYPESCRIPT_VERSION, getDiagnosticsCompilerOptions, normalizeDiagnosticsPath, toDiagnosticsFileName, fromDiagnosticsFileName, isDiagnosticsProgramFile, getDiagnosticsChecks } from './diagnostics/diagnosticsCompilerOptions';
+export { DIAGNOSTICS_SHIMS_PATH, createDiagnosticsShims } from './diagnostics/createDiagnosticsShims';
+export type { ITypeScriptDiagnostic, ITypeScriptMessageChain } from './diagnostics/toCodeVideoDiagnostic';
+export { flattenDiagnosticMessageText, offsetToPosition, toCodeVideoDiagnostic, diagnosticContains } from './diagnostics/toCodeVideoDiagnostic';
+export { DIAGNOSTICS_ACTION_NAMES, parseDiagnosticLocation, usesDiagnostics, isDiagnosticsVisibleAt, getDiagnosticHoverAt } from './diagnostics/diagnosticActions';
+
 // project and action type guards
 export { isLesson } from './type-guards/isLesson';
 export { isCourse } from './type-guards/isCourse';

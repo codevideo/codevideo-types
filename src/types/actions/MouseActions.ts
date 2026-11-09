@@ -56,6 +56,8 @@ export type MouseActions =
 | "mouse-move-unsaved-changes-dialog-button-dont-save"
 /* Moves the mouse to the "Cancel" button on the unsaved changes dialog */
 | "mouse-move-unsaved-changes-dialog-button-cancel"
+/* Moves the mouse onto a diagnostic (squiggle) in the active editor and shows its hover (value: "path:line:column") */
+| "mouse-move-editor-diagnostic"
 | "mouse-move" // the 'composite' move action used by codevideo-mouse... might be legacy soon
 // mouse left clicks
 /* Moves the mouse to the center of the file explorer and clicks */

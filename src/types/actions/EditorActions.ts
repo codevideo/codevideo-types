@@ -29,4 +29,6 @@ export type EditorActions = 'editor-type'
     | 'editor-scroll-up'
     | 'editor-scroll-down'
     | 'editor-show-context-menu'
-    | 'editor-hide-context-menu';
+    | 'editor-hide-context-menu'
+    | 'editor-show-diagnostics'
+    | 'editor-hide-diagnostics';

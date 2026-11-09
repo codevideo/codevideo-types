@@ -103,6 +103,15 @@ export interface ICodeVideoIDEProps {
   isTerminalVisible?: boolean;
   /** Render the animated mouse cursor. Mouse actions keep their timing and effects when hidden. Default true. */
   isMouseVisible?: boolean;
+  /**
+   * Show TypeScript diagnostics in the editor: red error and yellow warning
+   * squiggles for .ts/.tsx files (syntax errors only for .js/.jsx), computed
+   * from the project's files with the shared settings in
+   * DIAGNOSTICS_COMPILER_OPTIONS. They update when an action that changed a
+   * file finishes. 'editor-show-diagnostics' and 'editor-hide-diagnostics'
+   * switch them mid-lesson. Default false.
+   */
+  isDiagnosticsVisible?: boolean;
   /** Delay between simulated keystrokes in editor/terminal/input typing animations. Default 50ms. */
   keyboardTypingPauseMs?: number;
   /** Insert seeded, corrected keyboard typos during replay. Default false. */

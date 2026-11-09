@@ -3,6 +3,7 @@ import { AdvancedValueActionNames } from "../constants/AdvancedValueActionNames"
 import { AllActionStrings } from "../constants/AllActionStrings";
 import { IAction } from "../interfaces/IAction";
 import { isRepeatableAction } from "../type-guards/isRepeatableAction";
+import { parseDiagnosticLocation } from "../diagnostics/diagnosticActions";
 
 // validates if the given object is an IAction
 export const isValidAction = (object: any): object is IAction => {
@@ -13,6 +14,11 @@ export const isValidAction = (object: any): object is IAction => {
 
     // advanced value actions must have a value that includes the separator
     if (object && AdvancedValueActionNames.includes(object.name) && !object.value.includes(advancedCommandValueSeparator)) {
+        return false;
+    }
+
+    // the diagnostic hover needs a 'path:line:column' location
+    if (object && object.name === 'mouse-move-editor-diagnostic' && !parseDiagnosticLocation(object.value)) {
         return false;
     }
 
