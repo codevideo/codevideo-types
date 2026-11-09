@@ -22,6 +22,12 @@ export const isValidAction = (object: any): object is IAction => {
         return false;
     }
 
+    // clipboard text breaks lines with \n alone: the VirtualEditor would keep a
+    // \r that the renderer's Monaco drops
+    if (object && object.name === 'clipboard-set-text' && typeof object.value === 'string' && object.value.includes('\r')) {
+        return false;
+    }
+
     // if the action is a repeatable action, check if the value is a number
     if (object.name && isRepeatableAction(object.name) && object.value && object.value !== "" && !isNaN(object.value)) {
         return object;

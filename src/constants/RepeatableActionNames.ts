@@ -22,6 +22,7 @@ export const RepeatableActionNames = [
     "editor-command-right",
     "editor-command-d",
     "editor-command-c",
+    "editor-command-x",
     "editor-command-v",
     "editor-shift-down-arrow",
     "editor-shift-up-arrow",

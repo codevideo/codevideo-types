@@ -3,6 +3,7 @@ import { IMouseSnapshot } from "./IMouseSnapshot";
 import { IAuthorSnapshot } from "./IAuthorSnapshot";
 import { ITerminalSnapshot } from "./ITerminalSnapshot";
 import { IFileExplorerSnapshot } from "./IFileExplorerSnapshot";
+import { IClipboardSnapshot } from "./IClipboardSnapshot";
 
 // represents a distinct moment in time during a lesson in a software course
 // including the entire IDE state, the mouse state, and the author's speech caption (if any)
@@ -17,4 +18,6 @@ export interface ICourseSnapshot {
     terminalSnapshot: ITerminalSnapshot;
     mouseSnapshot: IMouseSnapshot;
     authorSnapshot: IAuthorSnapshot;
+    // optional so snapshots from before the clipboard existed stay valid; missing means empty
+    clipboardSnapshot?: IClipboardSnapshot;
 }

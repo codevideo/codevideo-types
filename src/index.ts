@@ -18,6 +18,8 @@ export { IEditorSnapshot } from './interfaces/toplevel/IEditorSnapshot';
 export { ITerminalSnapshot } from './interfaces/toplevel/ITerminalSnapshot';
 export { IMouseSnapshot } from './interfaces/toplevel/IMouseSnapshot';
 export { IAuthorSnapshot } from './interfaces/toplevel/IAuthorSnapshot';
+export { IClipboardSnapshot } from './interfaces/toplevel/IClipboardSnapshot';
+export { IClipboard } from './interfaces/IClipboard';
 
 // log interfaces
 export { IVirtualLayerLog } from './interfaces/logs/IVirtualLayerLog';
@@ -83,6 +85,7 @@ export { isRepeatableAction } from './type-guards/isRepeatableAction';
 export { isAuthorAction } from './type-guards/isAuthorAction';
 export { isFileExplorerAction } from './type-guards/isFileExplorerAction';
 export { isMouseAction } from './type-guards/isMouseAction';
+export { isClipboardAction } from './type-guards/isClipboardAction';
 export { isSlideAction } from './type-guards/isSlideAction';
 export { isExternalAction } from './type-guards/isExternalAction';
 export { isCompositeAction } from './type-guards/isCompositeAction';
@@ -98,6 +101,7 @@ export { filterFileExplorerActions } from './type-guards/filterFileExplorerActio
 export { filterEditorActions } from './type-guards/filterEditorActions';
 export { filterTerminalActions } from './type-guards/filterTerminalActions';
 export { filterMouseActions } from './type-guards/filterMouseActions';
+export { filterClipboardActions } from './type-guards/filterClipboardActions';
 export { filterSlideActions } from './type-guards/filterSlideActions';
 export { filterExternalActions } from './type-guards/filterExternalActions';
 
@@ -120,6 +124,8 @@ export { TerminalAction } from './types/TerminalAction';
 export { FileExplorerAction } from './types/FileExplorerAction';
 export { MouseActions } from './types/actions/MouseActions';
 export { MouseAction } from './types/MouseAction';
+export { ClipboardActions } from './types/actions/ClipboardActions';
+export { ClipboardAction } from './types/ClipboardAction';
 export { ExternalAction } from './types/ExternalAction';
 export { ExternalActions } from './types/actions/ExternalActions';
 export { ProgrammingLanguages } from './types/ProgrammingLanguages';

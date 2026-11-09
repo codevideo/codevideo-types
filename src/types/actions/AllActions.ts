@@ -5,6 +5,7 @@ import { TerminalActions } from "./TerminalActions";
 import { EditorActions } from "./EditorActions";
 import { ExternalActions } from "./ExternalActions";
 import { SlideActions } from "./SlideActions";
+import { ClipboardActions } from "./ClipboardActions";
 
 // all actions combines the 5 domains of the CodeVideo world
 export type AllActions =
@@ -15,4 +16,5 @@ export type AllActions =
   | TerminalActions
   | AuthorActions
   | ExternalActions
-  | SlideActions;
+  | SlideActions
+  | ClipboardActions;
