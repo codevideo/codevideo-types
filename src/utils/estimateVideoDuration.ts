@@ -42,29 +42,49 @@ const KEY_PRESSES = new Set<string>([
 export const estimateActionDurationsMs = (actions: IAction[], options: IEstimateOptions = {}): number[] => {
     const keyboardTypingPauseMs = positiveOr(options.keyboardTypingPauseMs, DEFAULT_KEYBOARD_TYPING_PAUSE_MS);
     const standardPauseMs = positiveOr(options.standardPauseMs, DEFAULT_STANDARD_PAUSE_MS);
-    return actions.map((action, index) => {
+    // author-speak-during keeps talking while the next actions play, and every
+    // speak action first waits for it to finish, so voices never overlap.
+    let elapsedMs = 0;
+    let speechEndsAtMs = 0;
+    const durations = actions.map((action, index) => {
         // Every action first waits a standard pause so the DOM can settle.
         let ms = standardPauseMs;
-        // Repeatable actions run as many times as their value says.
-        const times = isRepeatableAction(action) ? parseInt(action.value, 10) : 1;
-        for (let i = 0; i < times; i++) {
-            ms += perRunMs(action, index, keyboardTypingPauseMs, standardPauseMs, options.speechMs);
+        if (SPEECH.has(action.name)) {
+            ms += Math.max(0, speechEndsAtMs - (elapsedMs + ms));
+            const speechMs = speechLengthMs(action, index, options.speechMs);
+            if (action.name === "author-speak-during") speechEndsAtMs = elapsedMs + ms + speechMs;
+            else ms += speechMs;
+        } else {
+            // Repeatable actions run as many times as their value says.
+            const times = isRepeatableAction(action) ? parseInt(action.value, 10) : 1;
+            for (let i = 0; i < times; i++) {
+                ms += perRunMs(action, keyboardTypingPauseMs, standardPauseMs);
+            }
         }
+        elapsedMs += ms;
         return ms;
     });
+    // Narration still playing after the last action counts in the last action,
+    // so the durations still add up to the video's length.
+    if (durations.length && speechEndsAtMs > elapsedMs) durations[durations.length - 1] += speechEndsAtMs - elapsedMs;
+    return durations;
 };
 
 /** The video's estimated length in seconds: the sum of estimateActionDurationsMs. */
 export const estimateVideoDurationInSeconds = (actions: IAction[], options: IEstimateOptions = {}): number =>
     estimateActionDurationsMs(actions, options).reduce((total, ms) => total + ms, 0) / 1000;
 
-const perRunMs = (action: IAction, index: number, keyboardTypingPauseMs: number, standardPauseMs: number, speechMs?: Record<number, number>): number => {
+const SPEECH = new Set<string>(["author-speak-before", "author-speak-after", "author-speak-during"]);
+
+/** How long a narration clip plays: measured if known, otherwise from its word count. */
+const speechLengthMs = (action: IAction, index: number, speechMs?: Record<number, number>): number => {
+    const measured = speechMs?.[index];
+    if (measured !== undefined && measured > 0) return measured;
+    return wordCount(action.value) / WORDS_PER_SECOND * 1000;
+};
+
+const perRunMs = (action: IAction, keyboardTypingPauseMs: number, standardPauseMs: number): number => {
     const name = action.name;
-    if (name === "author-speak-before" || name === "author-speak-after") {
-        const measured = speechMs?.[index];
-        if (measured !== undefined && measured > 0) return measured;
-        return wordCount(action.value) / WORDS_PER_SECOND * 1000;
-    }
     if (name === "author-wait") {
         const ms = parseInt(action.value, 10);
         return ms > 0 ? ms : DEFAULT_WAIT_MS;
@@ -77,8 +97,8 @@ const perRunMs = (action: IAction, index: number, keyboardTypingPauseMs: number,
     if (KEY_PRESSES.has(name)) return keyboardTypingPauseMs;
     if (name === "editor-scroll-up" || name === "editor-scroll-down") return standardPauseMs;
     if (name.startsWith("mouse-move-")) return standardPauseMs + MOUSE_MOVE_PADDING_MS;
-    // author-speak-during, file explorer typing (not awaited in realtime),
-    // clicks, slides and external pages add nothing beyond the base pause.
+    // File explorer typing (not awaited in realtime), clicks, slides and
+    // external pages add nothing beyond the base pause.
     return 0;
 };
 
